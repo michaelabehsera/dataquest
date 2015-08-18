@@ -1,11 +1,11 @@
 %butt_v1 {
 	height: 52rem;
 	padding: 0 $gl_indent*3.4;
-	font-family: $proxima_nova_soft_b;
 	color:$white;
 	line-height: 52rem;
 	text-align: center;
 	background: $green;
+	font-weight: 700;
 	border-radius: 3rem;
 	transition:background .3s ease;
 

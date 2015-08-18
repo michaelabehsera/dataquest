@@ -9,7 +9,7 @@ body {
 	position: relative;
 	min-height: 100%;
 	font-size: $base_font_size;
-	font-weight: 400;
+	font-weight: 500;
 	color: $def_text_color;
 	-webkit-text-size-adjust: none;
 }
@@ -34,6 +34,7 @@ a {
 }
 
 h2, h3, h4{
+	font-weight: 700;
 	color: $gray_2;
 }
 
@@ -59,7 +60,6 @@ p{
 //------------------------------------------------------------common styles
 .section_title {
 	font-size: 30rem;
-	font-family: $proxima_nova_soft_b;
 	color: $gray_2;
 
 	&.st_mod {
@@ -163,7 +163,6 @@ p{
 }
 
 .head_start_title {
-	font-family: $proxima_nova_soft_b;
 	font-size: 47rem;
 	color: $white;
 }
@@ -236,8 +235,8 @@ p{
 
 	position: relative;
 	color: $white;
+	font-weight: 700;
 	line-height: 1;
-	font-family: $proxima_nova_soft_b;
 	opacity:0;
 
 	.head_slide_sec_part.active_mod & {
@@ -261,7 +260,6 @@ p{
 }
 
 .head_cource_text_title {
-	font-family: $proxima_nova_soft_b;
 	font-size: 18rem;
 	opacity:0;
 
@@ -275,6 +273,7 @@ p{
 	padding: $gl_indent*2.6 0 0 0;
 	line-height: 1.5;
 	opacity: 0;
+
 
 	.head_slide_sec_part.active_mod & {
 		opacity:1;
@@ -471,7 +470,6 @@ p{
 	display: block;
 	padding: $gl_indent*7.2 0 0 0;
 	font-size: 21rem;
-	font-family: $proxima_nova_soft_b;
 	text-align: center;
 
 	&:before {
@@ -579,9 +577,9 @@ p{
 }
 
 .course_title {
-	font-family: $proxima_nova_soft_b;
 	font-size: 18rem;
 	color: $gray_2;
+	font-weight: 700;
 }
 
 .course_def {
@@ -741,7 +739,7 @@ p{
 	@extend %st_shadow_2;
 
 	position: relative;
-	padding: $gl_indent*2.6;
+	padding: $gl_indent*1.7 $gl_indent*2.4;
 	text-align: center;
 	border-radius: $br_global;
 	background: $white;
@@ -767,7 +765,6 @@ p{
 	font-size: 14rem;
 	font-weight: 700;
 	line-height: 25rem;
-	font-family: $proxima_nova_soft_b;
 }
 
 //------------------------------------------------------------reply section###
@@ -808,7 +805,6 @@ p{
 	margin: $gl_indent*2.6 0 0 0;
 	padding: $gl_indent*.4 0;
 	color: $gray_2;
-	font-family: $proxima_nova_soft_b;
 	border-bottom: 1px solid $gray_2;
 
 	&:hover, &:focus {
@@ -873,7 +869,7 @@ p{
 
 .price_main_title {
 	font-size: 18rem;
-	font-family: $proxima_nova_soft_b;
+
 }
 
 .price_includes_list {
