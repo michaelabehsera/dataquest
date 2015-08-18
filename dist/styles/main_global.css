@@ -321,7 +321,7 @@ table {
 
 .reply_slider_w .bx-viewport {
   overflow: visible !important; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .reply_slider_w .bx-viewport {
       overflow: hidden !important; } }
 
@@ -498,32 +498,17 @@ a {
   padding: 0 26rem 100rem; }
 
 .head_slider_item {
+  position: absolute;
+  width: 100% !important;
   height: 770rem;
-  position: relative;
-  -webkit-transition: opacity 0.3s ease;
-          transition: opacity 0.3s ease;
+  top: 0;
+  left: 0;
   opacity: 0; }
-  .head_slider_item.active_slide {
-    z-index: 60 !important;
-    display: list-item !important;
-    opacity: 1; }
-  .head_slider_item.next_slide {
-    z-index: 50 !important;
-    display: list-item !important;
-    opacity: 1; }
-  .head_slider_item.next_sec_slide {
-    z-index: 40 !important;
-    display: list-item !important;
-    opacity: 1; }
-  .head_slider_item.prev_slide {
-    z-index: 30 !important;
-    display: list-item !important;
-    opacity: 0; }
 
 .head_slider_item_in {
   position: absolute;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
   padding: 0 60rem 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -615,33 +600,7 @@ a {
   position: relative;
   z-index: 15;
   border-radius: 3rem;
-  overflow: hidden;
-  -webkit-transform: translate(90rem, 90rem);
-      -ms-transform: translate(90rem, 90rem);
-          transform: translate(90rem, 90rem);
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-  opacity: 0; }
-  .active_slide .head_course_block {
-    -webkit-transform: translate(0, 0) scale(1);
-        -ms-transform: translate(0, 0) scale(1);
-            transform: translate(0, 0) scale(1);
-    opacity: 1; }
-  .next_slide .head_course_block {
-    -webkit-transform: translate(30rem, 30rem) scale(0.95);
-        -ms-transform: translate(30rem, 30rem) scale(0.95);
-            transform: translate(30rem, 30rem) scale(0.95);
-    opacity: 1; }
-  .next_sec_slide .head_course_block {
-    -webkit-transform: translate(60rem, 60rem) scale(0.9);
-        -ms-transform: translate(60rem, 60rem) scale(0.9);
-            transform: translate(60rem, 60rem) scale(0.9);
-    opacity: 1; }
-  .prev_slide .head_course_block {
-    -webkit-transform: translate(-30rem, -30rem) scale(1);
-        -ms-transform: translate(-30rem, -30rem) scale(1);
-            transform: translate(-30rem, -30rem) scale(1);
-    opacity: 1; }
+  overflow: hidden; }
 
 .head_course_title_w {
   padding: 26rem;
@@ -797,7 +756,7 @@ a {
 
 .learn_section {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .learn_section_def {
@@ -904,7 +863,7 @@ a {
 
 .course_section {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .courses_section_def {
@@ -974,7 +933,7 @@ a {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .course_item {
       float: left;
       -webkit-box-flex: 0;
@@ -1066,7 +1025,7 @@ a {
 
 .reply_section {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1091,7 +1050,7 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .reply_section {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1124,7 +1083,7 @@ a {
           flex: 0 0 auto;
   width: 50%;
   padding: 0 110rem 0 0; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .reply_main {
       width: 100%;
       padding: 0; } }
@@ -1140,7 +1099,7 @@ a {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: 50%; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .reply_slider_w {
       width: 100%; } }
 
@@ -1227,7 +1186,7 @@ a {
 
 .price_section {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1602,7 +1561,7 @@ a {
     top: 11rem; }
     .fixed_mod .user_menu_butt:before {
       background: #1a3fde; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1000px) {
       .user_menu_butt:before {
         -webkit-transform: translate(0, -10rem);
             -ms-transform: translate(0, -10rem);
@@ -1622,7 +1581,7 @@ a {
     top: 11rem; }
     .fixed_mod .user_menu_butt:after {
       background: #1a3fde; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1000px) {
       .user_menu_butt:after {
         -webkit-transform: translate(0, 10rem);
             -ms-transform: translate(0, 10rem);

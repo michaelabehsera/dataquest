@@ -73,35 +73,38 @@ a {
 	position: relative;
 	background: $blue;
 	padding: 0 $gl_indent*2.6 $gl_indent*10;
+
 }
 
-
 .head_slider_item {
+	position: absolute;
+	width: 100% !important;
 	height: 870rem - 100rem;
-	position: relative;
-	transition:opacity .3s ease;
-	opacity:0;
+	top: 0;
+	left: 0;
+	opacity: 0;
 
-	&.active_slide {
-		z-index: 60 !important;
-		display:list-item !important;
-		opacity:1;
-	}
-	&.next_slide {
-		z-index: 50 !important;
-		display:list-item !important;
-		opacity:1;
-	}
-	&.next_sec_slide {
-		z-index: 40 !important;
-		display:list-item !important;
-		opacity:1;
-	}
-	&.prev_slide {
-		z-index: 30 !important;
-		display: list-item !important;
-		opacity:0;
-	}
+
+//	&.active_slide {
+//		z-index: 60 !important;
+//		display:list-item !important;
+//		opacity:1;
+//	}
+//	&.next_slide {
+//		z-index: 50 !important;
+//		display:list-item !important;
+//		opacity:1;
+//	}
+//	&.next_sec_slide {
+//		z-index: 40 !important;
+//		display:list-item !important;
+//		opacity:1;
+//	}
+//	&.prev_slide {
+//		z-index: 30 !important;
+//		display: list-item !important;
+//		opacity:0;
+//	}
 }
 
 .head_slider_item_in {
@@ -167,29 +170,29 @@ a {
 	border-radius: $br_global;
 	overflow: hidden;
 
-	transform:translate(90rem,90rem);
-	transition:all .3s ease;
-	opacity:0;
+//	transform:translate(90rem,90rem);
+//	transition:all .3s ease;
+//	opacity:0;
 
-	.active_slide & {
-		transform:translate(0,0) scale(1);
-		opacity:1;
-	}
-
-	.next_slide & {
-		transform:translate(30rem,30rem) scale(.95);
-		opacity:1;
-	}
-
-	.next_sec_slide & {
-		transform:translate(60rem,60rem) scale(.9);
-		opacity:1;
-	}
-
-	.prev_slide & {
-		transform:translate(-30rem,-30rem) scale(1);
-		opacity:1;
-	}
+//	.active_slide & {
+//		transform:translate(0,0) scale(1);
+//		opacity:1;
+//	}
+//
+//	.next_slide & {
+//		transform:translate(30rem,30rem) scale(.95);
+//		opacity:1;
+//	}
+//
+//	.next_sec_slide & {
+//		transform:translate(60rem,60rem) scale(.9);
+//		opacity:1;
+//	}
+//
+//	.prev_slide & {
+//		transform:translate(-30rem,-30rem) scale(1);
+//		opacity:1;
+//	}
 }
 
 .head_course_title_w {

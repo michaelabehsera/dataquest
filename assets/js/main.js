@@ -1,4 +1,5 @@
-var $body,
+var rem = 1,
+	$body,
 	window_height,
 	window_width,
 	header,
@@ -7,6 +8,8 @@ var $body,
 	learn_section,
 	learn_offset,
 	$user_menu_butt,
+	main_slider_array = [],
+	main_slider_active_el = 0,
 	media_point_1 = 1024,
 	media_point_2 = 768,
 	media_point_3 = 480,
@@ -74,14 +77,138 @@ function scroll_function() {
 }
 
 function fadeSliderInit(target) {
-	target.bxSlider({
-		mode:'fade',
-		controls:false,
-		auto:true,
-		onSlideAfter: function ($slideElement, oldIndex, newIndex) {
-			$slideElement.addClass('active_slide').siblings().removeClass('active_slide');
-		}
+	$('.head_slider_item', target).each(function () {
+		var $this = $(this),
+			$this_index = $this.index();
+
+		var array_push_var={
+			'element': $this,
+			'element_state':$this_index + 1
+		};
+		main_slider_array.push(array_push_var);
+
+		console.log(main_slider_array);
 	});
+
+	target.bxSlider({
+		mode: 'fade',
+		speed:333,
+		pause:2000,
+		controls: false,
+		onlystate: true,
+		auto: true,
+		onSlideNext: function ($slideElement, oldIndex, newIndex) {
+			//console.log($slideElement, oldIndex, newIndex);
+			state_anim(newIndex);
+		},
+		onSlidePrev: function ($slideElement, oldIndex, newIndex) {
+			console.log($slideElement, oldIndex, newIndex);
+		},
+		onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+
+		},
+		onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+			state_anim(newIndex);
+
+			//$slideElement.addClass('active_slide').siblings().removeClass('active_slide');
+		}
+
+	});
+
+	//array.rocket.snabbt({
+	//			fromPosition: [0, 0, 0],
+	//			position: [0, -array.rocket_coords + 2 * rem, 0],
+	//			duration: anim_duration
+	//
+	//		}).then({
+	//			fromPosition: [0, -array.rocket_coords + 2 * rem, 0],
+	//			position: [0, -array.rocket_coords, 0],
+	//			easing: 'easeOut',
+	//			duration: second_d,
+	//			callback: function () {
+	//				footer();
+	//			}
+	//		});
+}
+
+function state_anim(active){
+
+	for (var i = 0; i < main_slider_array.length; i++) {
+
+		console.log(main_slider_array[i].element_state);
+		var step_x_from = 28 * rem,
+				step_x_to = 28 * rem,
+				step_y_from = 30 * rem,
+				step_y_to = 30 * rem,
+				$opacity_from = 0,
+				$opacity_to = 0,
+				$duration = 330;
+
+		//if (main_slider_active_el < active) {
+			main_slider_active_el = active;
+			if(main_slider_array[i].element_state == 1){
+
+				main_slider_array[i].element_state = main_slider_array.length - main_slider_array[i].element_state;
+
+				step_x_from = 0;
+				step_x_to = step_x_to * -1;
+				step_y_from = 0;
+				step_y_to = step_y_to * -1;
+				$opacity_from = 1;
+				$opacity_to = 0;
+
+			} else if(main_slider_array[i].element_state == 2){
+				main_slider_array[i].element_state = 1;
+
+				//step_x_from = step_x_from;
+				step_x_to = 0;
+				//step_y_from = step_y_from;
+				step_y_to = 0;
+				$opacity_from = .5;
+				$opacity_to = 1;
+
+			} else if(main_slider_array[i].element_state == 3){
+				main_slider_array[i].element_state = 2;
+
+				step_x_from = step_x_from * 2;
+				//step_x_to = step_x_to;
+				step_y_from = step_y_from * 2;
+				//step_y_to = step_y_to;
+				$opacity_from = .1;
+				$opacity_to = .5;
+
+			} else if (main_slider_array[i].element_state == 4) {
+				main_slider_array[i].element_state = 3;
+
+				step_x_from = step_x_from * 3;
+				step_x_to = step_x_to * 2;
+				step_y_from = step_y_from * 3;
+				step_y_to = step_y_to * 2;
+				$opacity_from = 0;
+				$opacity_to = .1;
+
+			} else if (main_slider_array[i].element_state > 4) {
+				step_x_from = 0;
+				step_x_to = step_x_to * 3;
+				step_y_from = 0;
+				step_y_to = step_y_to * 3;
+				$opacity_from = 0;
+				$opacity_to = 0;
+				$duration = 0;
+			}
+
+			main_slider_array[i].element.snabbt({
+				fromPosition: [step_x_from, step_y_from, 0],
+				position: [step_x_to, step_y_to, 0],
+				fromOpacity: $opacity_from,
+				opacity: $opacity_to,
+				easing: 'easeOut',
+				duration: $duration
+			});
+		//} else if(main_slider_active_el > active) {
+		//	main_slider_active_el = active;
+		//}
+	}
 }
 
 function vertSliderInit(target) {

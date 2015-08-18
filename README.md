@@ -1,1 +1,2 @@
-# Welcome to data quest project repo! #
+## link packages
+    npm link gulp gulp-clean gulp-jade gulp-sass gulp-inline-image gulp-autoprefixer gulp-plumber gulp-imagemin imagemin-pngquant gulp-uncss gulp-csso gulp-directory-sync browser-sync gulp-purifycss gulp-iconfont gulp-iconfont-css
