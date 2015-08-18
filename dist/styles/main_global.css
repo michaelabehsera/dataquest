@@ -524,6 +524,8 @@ p {
 .head_slider_list_w {
   height: calc(100vh - 80rem);
   width: calc(50% - 70rem); }
+  .head_slider_list_w .bx-viewport {
+    overflow: visible !important; }
 
 .head_slider_item {
   position: absolute !important;
@@ -1506,6 +1508,8 @@ p {
   .logo_anim_b_sub.mod_test {
     opacity: .5; }
   .logo_anim_b_sub path {
+    fill: #1a3fde; }
+  .fixed_mod .logo_anim_b_sub path {
     fill: #fff; }
 
 @-webkit-keyframes test {
@@ -1759,7 +1763,7 @@ p {
   .main_menu_link.header_mod:focus {
     text-decoration: underline; }
   .fixed_mod .main_menu_link.header_mod {
-    color: #1a3fde; }
+    color: #444; }
   @media screen and (max-width: 768px) {
     .main_menu_link.header_mod {
       display: block;
@@ -1776,12 +1780,12 @@ p {
   color: #1a3fde;
   text-decoration: none !important; }
   .login_butt:hover {
-    background: rgba(255, 255, 255, 0.6); }
+    background: rgba(255, 255, 255, 0.8); }
   .fixed_mod .login_butt {
-    color: #27d6b7;
+    background: #27d6b7;
     color: #fff; }
     .fixed_mod .login_butt:hover {
-      background: rgba(39, 214, 183, 0.6); }
+      background: rgba(39, 214, 183, 0.8); }
   @media screen and (max-width: 768px) {
     .login_butt {
       display: block;

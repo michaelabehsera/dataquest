@@ -54,7 +54,13 @@
 	}
 
 	path{
-		fill: $white;
+		fill: $blue;
+	}
+
+	.fixed_mod & {
+		path{
+				fill: $white;
+			}
 	}
 }
 
@@ -247,7 +253,7 @@
 			text-decoration: underline;
 		}
 		.fixed_mod & {
-			color:$blue;
+			color:$def_text_color;
 		}
 
 		@include bp($point_2) {
@@ -268,14 +274,14 @@
 	text-decoration: none !important;
 
 	&:hover {
-		background: transparentize($white, .4);
+		background: transparentize($white, .2);
 	}
 	.fixed_mod & {
-		color:$light_green_2;
+		background:$light_green_2;
 		color: $white;
 
 		&:hover {
-			background: transparentize($light_green_2, .4);
+			background: transparentize($light_green_2, .2);
 		}
 	}
 

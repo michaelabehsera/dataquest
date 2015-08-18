@@ -93,6 +93,10 @@ p{
 .head_slider_list_w{
 	height: calc(100vh - #{$header_height});
 	width: calc(50% - 70rem);
+
+	.bx-viewport{
+		overflow: visible !important;
+	}
 }
 
 .head_slider_item {
