@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'data_iconfont';
+	src:url('fonts/data_iconfont.eot?-7uggwc');
+	src:url('fonts/data_iconfont.eot?#iefix-7uggwc') format('embedded-opentype'),
+		url('fonts/data_iconfont.ttf?-7uggwc') format('truetype'),
+		url('fonts/data_iconfont.woff?-7uggwc') format('woff'),
+		url('fonts/data_iconfont.svg?-7uggwc#data_iconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'data_iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-box:before {
+	content: "\e600";
+}
+.icon-arrow_right:before {
+	content: "\e00f";
+}
+.icon-book:before {
+	content: "\e002";
+}
+.icon-chart:before {
+	content: "\e004";
+}
+.icon-gradient:before {
+	content: "\e005";
+}
+.icon-power:before {
+	content: "\e006";
+}

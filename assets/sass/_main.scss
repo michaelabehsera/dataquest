@@ -1,0 +1,871 @@
+//------------------------------------------------------------base styles
+html {
+	height: 100%;
+	font: normal 1px/1.33 $font_1;
+	font-weight: 300;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+	font-size: $base_font_size;
+	font-weight: 400;
+	color: $def_text_color;
+	-webkit-text-size-adjust: none;
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	background: $wrapper_bg;
+}
+
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important;
+}
+
+a {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+.hide {
+	display: none !important;
+}
+
+.base {
+	position: relative;
+	padding: $header_height 0 0;
+}
+
+.elements_list {
+	padding: 30px;
+	color: black;
+}
+
+//------------------------------------------------------------common styles
+.section_title {
+	font-size: 30rem;
+	font-family: $proxima_nova_soft_b;
+	&.st_mod {
+		text-align: center;
+	}
+	&.reply_mod {
+		color: $white;
+		font-size: 22rem;
+	}
+	&.price_mod {
+
+	}
+}
+
+//------------------------------------------------------------common styles###
+
+//------------------------------------------------------------base styles###
+
+//------------------------------------------------------------head slider block
+.head_slider_w {
+	height: calc(100vh - #{$header_height});
+	position: relative;
+	background: $blue;
+	padding: 0 $gl_indent*2.6 $gl_indent*10;
+}
+
+
+.head_slider_item {
+	height: 870rem - 100rem;
+	position: relative;
+	transition:opacity .3s ease;
+	opacity:0;
+
+	&.active_slide {
+		z-index: 60 !important;
+		display:list-item !important;
+		opacity:1;
+	}
+	&.next_slide {
+		z-index: 50 !important;
+		display:list-item !important;
+		opacity:1;
+	}
+	&.next_sec_slide {
+		z-index: 40 !important;
+		display:list-item !important;
+		opacity:1;
+	}
+	&.prev_slide {
+		z-index: 30 !important;
+		display: list-item !important;
+		opacity:0;
+	}
+}
+
+.head_slider_item_in {
+	@extend %hor_vert_centr;
+
+	position: absolute;
+	width: 100%;
+	max-width: $point_1;
+	padding: 0 $gl_indent*6 0 0;
+
+	@include flex-block(row, nowrap, flex-start, space-between);
+}
+
+.head_slide_fist_part {
+	position: relative;
+	z-index: 5;
+	flex: 0 0 auto;
+	width: 60%;
+	padding: 0 $gl_indent*14 0 0;
+	opacity:0;
+	visibility:hidden;
+
+	.active_slide & {
+		visibility:visible;
+		opacity:1;
+	}
+
+	@include flex_block(column, nowrap, center, flex-start)
+}
+
+.head_start_title {
+	font-family: $proxima_nova_soft_b;
+	font-size: 47rem;
+	color: $white;
+}
+
+.head_start_def {
+	padding: $gl_indent*2.6 0 0 0;
+	font-size: 17rem;
+	line-height: 2;
+	color: $white;
+}
+
+.head_start_butt {
+	@extend %butt_v1;
+
+	display: inline-block;
+	margin: $gl_indent*2.6 0 0 0;
+}
+
+.head_slide_sec_part {
+	position: relative;
+	z-index: 5;
+	flex: 0 0 auto;
+	width: 40%;
+}
+
+.head_course_block {
+	@extend %st_shadow;
+
+	position: relative;
+	z-index: 15;
+	border-radius: $br_global;
+	overflow: hidden;
+
+	transform:translate(90rem,90rem);
+	transition:all .3s ease;
+	opacity:0;
+
+	.active_slide & {
+		transform:translate(0,0) scale(1);
+		opacity:1;
+	}
+
+	.next_slide & {
+		transform:translate(30rem,30rem) scale(.95);
+		opacity:1;
+	}
+
+	.next_sec_slide & {
+		transform:translate(60rem,60rem) scale(.9);
+		opacity:1;
+	}
+
+	.prev_slide & {
+		transform:translate(-30rem,-30rem) scale(1);
+		opacity:1;
+	}
+}
+
+.head_course_title_w {
+	padding: $gl_indent*2.6;
+	background: $light_green_2;
+}
+
+.head_course_title {
+	@extend %icon-book;
+
+	position: relative;
+	padding: 0 0 0 $gl_indent*2;
+	color: $white;
+	line-height: 1;
+	font-family: $proxima_nova_soft_b;
+	opacity:0;
+
+	.active_slide & {
+		opacity:1;
+	}
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		font-size: 16rem;
+		transform: translate(0, -50%);
+	}
+}
+
+.head_course_text_w {
+	position: relative;
+	padding: $gl_indent*2.6 $gl_indent*2.6 $gl_indent*14;
+	background: $white;
+}
+
+.head_cource_text_title {
+	font-family: $proxima_nova_soft_b;
+	font-size: 18rem;
+	opacity:0;
+
+	.active_slide & {
+		opacity:1;
+	}
+}
+
+.head_cource_text {
+	padding: $gl_indent*2.6 0 0 0;
+	line-height: 1.5;
+	opacity: 0;
+
+	.active_slide & {
+		opacity:1;
+	}
+}
+
+.head_course_more_butt {
+	@extend %icon-arrow_right;
+
+	position: absolute;
+	bottom: $gl_indent*2.6;
+	right: $gl_indent*2.6;
+	color: $gray;
+	transition: all .3s ease;
+	opacity:0;
+	visibility:hidden;
+
+	.active_slide & {
+		opacity:1;
+		visibility:visible;
+	}
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: $def_text_color;
+	}
+}
+
+.head_slider_decor_block {
+	@extend %stretch;
+
+	z-index: 5;
+}
+
+.head_slider_circle {
+	position: absolute;
+	z-index: 0;
+	background: $black;
+	opacity: .15;
+	border-radius: 50%;
+	&.mod_1 {
+		bottom: 50rem;
+		left: percentage(80rem/1800rem);
+		height: 28rem;
+		width: 28rem;
+	}
+	&.mod_2 {
+		bottom: 136rem;
+		left: percentage(444rem/1800rem);
+		height: 62rem;
+		width: 62rem;
+	}
+	&.mod_3 {
+		bottom: 170rem;
+		left: percentage(480rem/1800rem);
+		height: 46rem;
+		width: 46rem;
+	}
+	&.mod_4 {
+		bottom: 321rem;
+		left: percentage(866rem/1800rem);
+		height: 62rem;
+		width: 62rem;
+	}
+	&.mod_5 {
+		bottom: 60rem;
+		right: percentage(790rem/1800rem);
+		height: 19rem;
+		width: 19rem;
+	}
+	&.mod_6 {
+		bottom: 129rem;
+		right: percentage(511rem/1800rem);
+		height: 62rem;
+		width: 62rem;
+	}
+	&.mod_7 {
+		bottom: 530rem;
+		right: percentage(262rem/1800rem);
+		height: 20rem;
+		width: 20rem;
+	}
+	&.mod_8 {
+		bottom: 194rem;
+		right: percentage(126rem/1800rem);
+		height: 28rem;
+		width: 28rem;
+	}
+	&.mod_9 {
+		bottom: 408rem;
+		right: percentage(65rem/1800rem);
+		height: 86rem;
+		width: 86rem;
+	}
+	&.mod_10 {
+		bottom: 167rem;
+		left: percentage(34rem/1800rem);
+		height: 8rem;
+		width: 8rem;
+	}
+}
+
+.head_slider_more_link {
+	position: absolute;
+	z-index: 30;
+	bottom: 100rem;
+	left: 50%;
+	padding: 0 $gl_indent*2 0 0;
+	font-size: 16rem;
+	line-height: 1;
+	color: $white;
+	opacity: .6;
+	transform: translate(-50%, 100%);
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -4rem;
+
+		@include arrow(bottom, $white, 8rem)
+	}
+}
+
+//------------------------------------------------------------head slider block###
+
+//------------------------------------------------------------learn section
+.learn_section_w {
+	padding: $gl_indent*12.2 $gl_indent*2.6 0;
+}
+
+.learn_section {
+	width: 100%;
+	max-width: $point_1;
+	margin: 0 auto;
+}
+
+.learn_section_def {
+	padding: $gl_indent*1.6 0 0 0;
+	text-align: center;
+	color: $gray_2;
+}
+
+.learn_list {
+	padding: $gl_indent*4 0 0 0;
+	margin: 0 (-$gl_indent*1.4);
+
+	@include container();
+}
+
+.learn_item {
+	padding: 0 $gl_indent*1.4;
+
+	@include grid_item(1/3);
+	@include flex_block(column, nowrap, flex-start, flex-start);
+	@include bp($point_2) {
+		margin: $gl_indent*2.6 0 0 0;
+
+		&:first-child {
+			margin: 0;
+		}
+
+		@include grid_item(1);
+	}
+}
+
+.learn_block {
+	@extend %st_shadow_2;
+
+	flex: 1 1 auto;
+	height: 100%;
+	width: 100%;
+	padding: $gl_indent*4.4 $gl_indent*2.6 $gl_indent*8.8;
+	background: $white;
+	border-radius: $br_global;
+}
+
+.learn_title {
+	position: relative;
+	display: block;
+	padding: $gl_indent*7.2 0 0 0;
+	font-size: 21rem;
+	font-family: $proxima_nova_soft_b;
+	text-align: center;
+
+	&:before {
+		@extend %hor_centr;
+
+		position: absolute;
+		top: 0;
+		font-size: 43rem;
+	}
+
+	&.lightning_mod {
+		@extend %icon-power;
+	}
+	&.grad_mod {
+		@extend %icon-gradient;
+	}
+	&.clock_mod {
+		@extend %icon-chart;
+	}
+}
+
+.learn_text {
+	padding: $gl_indent*2.6 0 0 0;
+	text-align: center;
+	line-height: 1.5;
+	color: $gray_2;
+}
+
+//------------------------------------------------------------learn section###
+
+//------------------------------------------------------------courses section
+.course_section_w {
+	padding: $gl_indent*12.2 $gl_indent*2.6;
+}
+
+.course_section {
+	width: 100%;
+	max-width: $point_1;
+	margin: 0 auto;
+}
+
+.courses_section_def {
+	padding: $gl_indent*1.6 0 0 0;
+	text-align: center;
+	color: $gray_2;
+}
+
+.courses_info {
+	padding: $gl_indent*2.6 $gl_indent*5;
+}
+
+.courses_info_item {
+	color: $gray_2;
+}
+
+.course_list {
+	@extend %st_shadow_2;
+
+	padding: $gl_indent*.6;
+	background: $white;
+	border-radius: $br_global;
+	overflow: hidden;
+
+	@include container();
+}
+
+.course_item {
+	background: $white;
+	padding: $gl_indent*1.2;
+
+	@include grid_item(1/3);
+	@include flex_block(column, nowrap, flex-start, flex-start);
+	@include bp($point_1) {
+		@include grid_item(1/2);
+	}
+	@include bp($point_2) {
+		@include grid_item(1);
+	}
+}
+
+.course_block {
+	position: relative;
+	flex: 1 1 auto;
+	height: 100%;
+	width: 100%;
+	padding: $gl_indent*2;
+	color: $def_text_color;
+	background: $light_gray;
+	transition: all .3s ease;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background: $green_2;
+		color: $white;
+	}
+}
+
+.course_title {
+	font-family: $proxima_nova_soft_b;
+	font-size: 18rem;
+}
+
+.course_def {
+	padding: $gl_indent*2 0 0 0;
+	line-height: 1.5;
+}
+
+.course_icon {
+	@extend %icon-box;
+
+	position: absolute;
+	width: 34rem;
+	height: 34rem;
+	top: 12rem;
+	right: 12rem;
+	color: $white;
+	border-radius: 50%;
+	transition: all .3s ease;
+
+	&:before {
+		@extend %hor_vert_centr;
+
+		position: absolute;
+		font-size: 20rem;
+	}
+
+	&.green_1_mod {
+		background: $green;
+	}
+	&.purple_mod {
+		background: $purple;
+	}
+	&.blue_1_mod {
+		background: $blue_2;
+	}
+	&.blue_2_mod {
+		background: $blue_3;
+	}
+	&.blue_3_mod {
+		background: $light_blue_1;
+	}
+	&.green_2_mod {
+		background: $light_green_2;
+	}
+	&.blue_4_mod {
+		background: $blue_4;
+	}
+
+	.course_block:hover & {
+		background: $light_green_2;
+	}
+}
+
+.course_link_decor {
+	@extend %icon-arrow_right;
+
+	color: $light_gray;
+	position: absolute;
+	right: 16rem;
+	bottom: 18rem;
+	transition: all .3s ease;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+//------------------------------------------------------------courses section###
+
+//------------------------------------------------------------reply section
+.reply_section_w {
+	padding: $gl_indent*12.2 $gl_indent*2.6;
+	background: url(../i/chart_bg.png) 50% 100%;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.reply_section {
+	width: 100%;
+	max-width: $point_1;
+	margin: 0 auto;
+
+	@include flex-block(row, nowrap, center, center);
+	@include bp($point_1) {
+		@include flex-block(row, wrap, center, center);
+	}
+}
+
+.reply_main {
+	flex: 0 0 auto;
+	width: 50%;
+	padding: 0 $gl_indent*11 0 0;
+
+	@include bp($point_1) {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.reply_section_def {
+	padding: $gl_indent*1.6 0 0 0;
+	color: $white;
+	line-height: 1.5;
+}
+
+.reply_slider_w {
+	flex: 0 0 auto;
+	width: 50%;
+
+	@include bp($point_1) {
+		width: 100%;
+	}
+}
+
+.reply_slider_list {
+}
+
+.reply_item {
+	padding: $gl_indent*3.2 0;
+	opacity: .5;
+	transition: opacity .3s ease;
+
+	&.active_slide {
+		opacity: 1;
+	}
+}
+
+.reply_block {
+	@include flex_block(row, nowrap, center, center);
+}
+
+.reply_autor_i_w {
+	@extend %st_shadow_2;
+
+	flex: 0 0 auto;
+	width: 76rem;
+	height: 76rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.reply_autor_i {
+	display: block;
+	width: 100%;
+}
+
+.reply_text_w {
+	flex: 1 1 auto;
+	padding: 0 0 0 $gl_indent*3;
+}
+
+.reply_text_block {
+	@extend %st_shadow_2;
+
+	position: relative;
+	padding: $gl_indent*2.6;
+	text-align: center;
+	border-radius: $br_global;
+	background: $white;
+
+	&:before {
+		content: "";
+		position: absolute;
+		right: 100%;
+		top: 50%;
+		transform: translate(0, -50%);
+
+		@include triangle(left, $white, 8);
+	}
+}
+
+.reply_text {
+	font-size: 13rem;
+}
+
+.reply_autor {
+	font-size: 14rem;
+	font-family: $proxima_nova_soft_b;
+}
+
+//------------------------------------------------------------reply section###
+
+//------------------------------------------------------------price section
+.price_section_w {
+	padding: $gl_indent*11 $gl_indent*2.6;
+}
+
+.price_section {
+	width: 100%;
+	max-width: $point_1;
+	margin: 0 auto;
+
+	@include flex_block(row, nowrap, flex-start, flex-start);
+	@include bp($point_2) {
+		@include flex_block(row, wrap, flex-start, flex-start);
+	}
+}
+
+.price_about {
+	flex: 0 0 auto;
+	width: 40%;
+	padding: 0 $gl_indent*7 0 0;
+
+	@include bp($point_2) {
+		width:100%;
+		padding: 0 0 $gl_indent*2.6 0;
+	}
+}
+
+.premium_section_def {
+	padding: $gl_indent*1.6 0 0 0;
+}
+
+.price_mail_butt {
+	display: inline-block;
+	margin: $gl_indent*2.6 0 0 0;
+	padding: $gl_indent*.4 0;
+	color: $gray_2;
+	font-family: $proxima_nova_soft_b;
+	border-bottom: 1px solid $gray_2;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		border-color: $black;
+		color: $black;
+	}
+}
+
+.price_main_list {
+	@extend %st_shadow_2;
+
+	flex: 0 0 auto;
+	width: 60%;
+	border-radius: $br_global;
+
+	@include flex_block(row, nowrap, flex-start, stretch);
+	@include bp($point_2) {
+		width:100%;
+	}
+	@include bp($point_3) {
+		box-shadow:none;
+
+		@include flex_block(row, wrap, flex-start, stretch);
+	}
+}
+
+.price_main_item {
+	flex: 0 0 auto;
+	width: 50%;
+	padding: $gl_indent*3.6;
+	background: $white;
+
+	&:first-child {
+		border-right: 1px solid $light_gray_2;
+	}
+
+	@include flex_block(column, nowrap, flex-start, flex-start);
+	@include bp($point_3) {
+		@extend %st_shadow_2;
+
+		width: 100%;
+		margin:$gl_indent*2.6 0 0 0;
+
+		&:first-child {
+			margin: 0;
+			border-right:none;
+		}
+	}
+}
+
+.price_main_block {
+	position: relative;
+	flex: 1 1 auto;
+	width: 100%;
+	height: 100%;
+	padding: 0 0 $gl_indent*16.6;
+}
+
+.price_main_title {
+	font-size: 18rem;
+	font-family: $proxima_nova_soft_b;
+}
+
+.price_includes_list {
+	padding: $gl_indent*6.4 0 0 0;
+}
+
+.price_include_item {
+	padding: $gl_indent*4 0 0 0;
+	&:first-child {
+		padding: 0;
+	}
+}
+
+.price_include_item_in {
+	@extend %icon-compass;
+
+	position: relative;
+	display: block;
+	color: $gray_3;
+	line-height: 1;
+
+	&:before {
+		position: absolute;
+		right: 0;
+		font-size: 16rem;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	&.free_mod {
+	}
+	&.pay_mod {
+		color: $green;
+	}
+}
+
+.price_get_butt {
+	@extend %butt_v1;
+
+	position: absolute;
+	bottom: $gl_indent*3.3;
+	left:50%;
+	display: block;
+	width: 160rem;
+	transform:translate(-50%,0);
+}
+
+//------------------------------------------------------------price section###
