@@ -8,26 +8,27 @@ block vars
 
 block content_block
 	.head_slider_w
-		ul.head_slider_list#head_slider
-			-var n = 1
-			while n < 5
-				li.head_slider_item
-					.head_slider_item_in
-						.head_slide_fist_part
-							h2.head_start_title Another title. #{n}
-							.head_start_def
-								p Start analyzing real data today, for free.
-							a(href="#").head_start_butt Get Started
-						.head_slide_sec_part
-							.head_course_block
-								.head_course_title_w
-									h2.head_course_title Courses
-								.head_course_text_w
-									h3.head_cource_text_title Data Visualization
-									.head_cource_text
-										p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-								a(href="#").head_course_more_butt
-				-n++
+		.head_slide_fist_part
+			h1.head_start_title Learn data science in your browser.
+			.head_start_def
+				p Start analyzing real data today, for free. Join 50,000 other learners from around the world.
+			a(href="#").head_start_butt Get Started
+		.head_slider_list_w
+			ul.head_slider_list#head_slider
+				-var n = 1
+				while n < 5
+					li.head_slider_item
+						.head_slider_item_in
+							.head_slide_sec_part
+								.head_course_block
+									.head_course_title_w
+										h2.head_course_title Courses
+									.head_course_text_w
+										h3.head_cource_text_title Data Visualization
+										.head_cource_text
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+									a(href="#").head_course_more_butt
+					-n++
 
 		.head_slider_decor_block
 			.head_slider_circle.mod_1

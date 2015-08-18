@@ -11,7 +11,7 @@
 
 .footer_logo_w {
 	padding: 0 $gl_indent*5 0 0;
-	border-right:1px solid $gray_4;
+	border-right:1px solid #ebebeb;
 
 	@include flex_block(column,nowrap,center,flex-start);
 	@include bp($point_3) {

@@ -54,7 +54,7 @@
 	}
 
 	path{
-		fill: $blue;
+		fill: $white;
 	}
 }
 
@@ -271,11 +271,11 @@
 		background: transparentize($white, .4);
 	}
 	.fixed_mod & {
-		background: $blue;
+		color:$light_green_2;
 		color: $white;
 
 		&:hover {
-			background: transparentize($blue, .4);
+			background: transparentize($light_green_2, .4);
 		}
 	}
 

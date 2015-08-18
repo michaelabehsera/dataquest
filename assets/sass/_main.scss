@@ -12,6 +12,7 @@ body {
 	font-weight: 500;
 	color: $def_text_color;
 	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
@@ -80,11 +81,18 @@ p{
 
 //------------------------------------------------------------head slider block
 .head_slider_w {
-	height: calc(100vh - #{$header_height});
+	@include flex-block(row, nowrap, flex-start, space-between);
+
+	height: 950rem;
 	position: relative;
 	background: $blue;
 	padding: 0 $gl_indent*2.6 $gl_indent*10;
 
+}
+
+.head_slider_list_w{
+	height: calc(100vh - #{$header_height});
+	width: calc(50% - 70rem);
 }
 
 .head_slider_item {
@@ -147,18 +155,9 @@ p{
 
 .head_slide_fist_part {
 	position: relative;
-	z-index: 5;
-	flex: 0 0 auto;
-	width: 60%;
-	padding: 0 $gl_indent*14 0 0;
-	opacity:0;
-	visibility:hidden;
-
-	&.active_mod {
-		visibility:visible;
-		opacity:1;
-	}
-
+	z-index: 15;
+	flex: 0 0 450rem;
+	margin: 0 140rem 0 auto;
 	@include flex_block(column, nowrap, center, flex-start)
 }
 
@@ -188,8 +187,7 @@ p{
 .head_slide_sec_part {
 	position: relative;
 	z-index: 5;
-	flex: 0 0 auto;
-	width: 40%;
+	flex: 0 0 406rem;
 }
 
 .head_course_block {
@@ -571,6 +569,10 @@ p{
 		color: $white;
 
 		p{
+			color: $white;
+		}
+
+		.course_title{
 			color: $white;
 		}
 	}

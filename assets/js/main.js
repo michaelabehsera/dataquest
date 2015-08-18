@@ -99,7 +99,7 @@ function fadeSliderInit(target) {
 		pause:6000,
 		controls: false,
 		onlystate: true,
-		auto: true,
+		auto: false,
 		onSliderLoad: function () {
 			state_anim(0);
 		},
