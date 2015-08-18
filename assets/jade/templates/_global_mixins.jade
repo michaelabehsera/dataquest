@@ -96,13 +96,16 @@ mixin breadcrumbs(array)
 
 mixin main_menu(menuArray)
 	ul.main_menu_list(class="#{menuArray.mod}")
-		each item in menuArray.items
+		each item, index in menuArray.items
 			if item.active
 				li.main_menu_item.active_mod(class="#{menuArray.mod}")
 					a(href="#{item.link}" class="scrollTo main_menu_link #{menuArray.mod}") #{item.title}
 			else
 				li.main_menu_item(class="#{menuArray.mod}")
-					a(href="#{item.link}" class="scrollTo main_menu_link #{menuArray.mod}") #{item.title}
+					if item.title == 'Login'
+						a(href="#{item.link}" class="login_butt #{menuArray.mod}") #{item.title}
+					else
+						a(href="#{item.link}" class="scrollTo main_menu_link #{menuArray.mod}") #{item.title}
 
 mixin social(items)
 	ul.social_list

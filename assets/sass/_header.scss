@@ -53,6 +53,10 @@
 	&.mod_test {
 		opacity: .5;
 	}
+
+	path{
+		fill: $blue;
+	}
 }
 
 @keyframes test {
@@ -232,26 +236,19 @@
 .main_menu_link {
 	&.header_mod {
 		padding: $gl_indent $gl_indent*1.6;
-		color:$white;
-		font-weight: bold;
-		border-radius: 3rem;
+		font-weight: 700;
 		transition:all .3s ease;
+		color: $white;
+		text-decoration: none;
 
 		&:hover {
-			background: $white;
-			color:$blue;
-			text-decoration: none;
+			text-decoration: underline;
 		}
 		&:focus {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 		.fixed_mod & {
 			color:$blue;
-
-			&:hover {
-				background: $blue;
-				color:$white
-			}
 		}
 
 		@include bp($point_2) {
@@ -259,5 +256,33 @@
 			width: 100%;
 			text-align: center;
 		}
+	}
+}
+
+.login_butt{
+	padding: $gl_indent $gl_indent*1.6;
+	font-weight: 700;
+	border-radius: $br_global;
+	transition: all .3s ease;
+	background: $white;
+	color: $blue;
+	text-decoration: none !important;
+
+	&:hover {
+		background: transparentize($white, .4);
+	}
+	.fixed_mod & {
+		background: $blue;
+		color: $white;
+
+		&:hover {
+			background: transparentize($blue, .4);
+		}
+	}
+
+	@include bp($point_2) {
+		display: block;
+		width: 100%;
+		text-align: center;
 	}
 }

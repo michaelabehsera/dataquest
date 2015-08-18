@@ -5,84 +5,30 @@ include templates/_project_mixins
 include templates/_project_vars
 block vars
 	- var array = {body_class:'', layuot_mod:'', sub_keywords:'',title_inner:'Title of the page'}
+
 block content_block
 	.head_slider_w
 		ul.head_slider_list#head_slider
-			li.head_slider_item
-				.head_slider_item_in
-					.head_slide_fist_part
-						.head_start_title Another title.
-						.head_start_def
-							p Start analyzing real data today, for free.
-						a(href="#").head_start_butt Get Started
-					.head_slide_sec_part
-						.head_course_block
-							.head_course_title_w
-								span.head_course_title Courses
-							.head_course_text_w
-								span.head_cource_text_title Data Visualization
-								.head_cource_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-							a(href="#").head_course_more_butt
-			li.head_slider_item
-				.head_slider_item_in
-					.head_slide_fist_part
-						.head_start_title Learn data science in your browser.
-						.head_start_def
-							p Start analyzing real data today, for free. Join 50,000 other  learners from around the world.
-						a(href="#").head_start_butt Get Started
-					.head_slide_sec_part
-						.head_course_block
-							.head_course_title_w
-								span.head_course_title Courses
-							.head_course_text_w
-								span.head_cource_text_title Data Visualization
-								.head_cource_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-							a(href="#").head_course_more_butt
-			li.head_slider_item
-				.head_slider_item_in
-					.head_slide_fist_part
-						.head_start_title Another title.
-						.head_start_def
-							p Start analyzing real data today, for free.
-						a(href="#").head_start_butt Get Started
-					.head_slide_sec_part
-						.head_course_block
-							.head_course_title_w
-								span.head_course_title Courses
-							.head_course_text_w
-								span.head_cource_text_title Data Visualization
-								.head_cource_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-							a(href="#").head_course_more_butt
-			li.head_slider_item
-				.head_slider_item_in
-					.head_slide_fist_part
-						.head_start_title Learn data science in your browser.
-						.head_start_def
-							p Start analyzing real data today, for free. Join 50,000 other  learners from around the world.
-						a(href="#").head_start_butt Get Started
-					.head_slide_sec_part
-						.head_course_block
-							.head_course_title_w
-								span.head_course_title Courses
-							.head_course_text_w
-								span.head_cource_text_title Data Visualization
-								.head_cource_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-							a(href="#").head_course_more_butt
-			li.head_slider_item
-				.head_slider_item_in
-					.head_slide_fist_part
-						.head_start_title Learn data science in your browser.
-						.head_start_def
-							p Start analyzing real data today, for free. Join 50,000 other  learners from around the world.
-						a(href="#").head_start_butt Get Started
-					.head_slide_sec_part
-						.head_course_block
-							.head_course_title_w
-								span.head_course_title Courses
-							.head_course_text_w
-								span.head_cource_text_title Data Visualization
-								.head_cource_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-							a(href="#").head_course_more_butt
+			-var n = 1
+			while n < 5
+				li.head_slider_item
+					.head_slider_item_in
+						.head_slide_fist_part
+							h2.head_start_title Another title. #{n}
+							.head_start_def
+								p Start analyzing real data today, for free.
+							a(href="#").head_start_butt Get Started
+						.head_slide_sec_part
+							.head_course_block
+								.head_course_title_w
+									h2.head_course_title Courses
+								.head_course_text_w
+									h3.head_cource_text_title Data Visualization
+									.head_cource_text
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim veniam, quis nostrud exercitay. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+								a(href="#").head_course_more_butt
+				-n++
+
 		.head_slider_decor_block
 			.head_slider_circle.mod_1
 			.head_slider_circle.mod_2
@@ -103,17 +49,17 @@ block content_block
 			ul.learn_list
 				li.learn_item
 					.learn_block
-						span.learn_title.lightning_mod Stay Motivated
+						h2.learn_title.lightning_mod Stay Motivated
 						.learn_text
 							p Learn data science by finding the answers to interesting questions, like "which airline is delayed the most?", and "what writing patterns are in CIA documents?".
 				li.learn_item
 					.learn_block
-						span.learn_title.grad_mod Learn by Doing
+						h2.learn_title.grad_mod Learn by Doing
 						.learn_text
 							p Learn interactively. You'll be writing real python code within minutes, all on our interactive coding and data analysis platform. We only have a few videos, and they're as short as we can make them.
 				li.learn_item
 					.learn_block
-						span.learn_title.clock_mod Stay Motivated
+						h2.learn_title.clock_mod Develop real-world skill
 						.learn_text
 							p We give you real datasets and problems, and help teach you how to solve them. You'll learn skills that you can immediately apply. The best way to learn data science is to work with actual data.
 	.course_section_w#course_section_w
@@ -121,9 +67,6 @@ block content_block
 			h2.section_title.st_mod Courses
 			.courses_section_def
 				p All courses are free, pick one and get started
-			.courses_info
-				.courses_info_item Tracks / Courses (tabs).
-				.courses_info_item Tracks example: Data analysis for marketers
 			ul.course_list
 				+course_item('Learning Python','Learn python, a programming language commonly used for data science.','green_1')
 				+course_item('Data Analysis','Analyze data sets and find meaningful insights.','purple')
@@ -149,10 +92,9 @@ block content_block
 							.reply_text_w
 								.reply_text_block
 									.reply_text
-										p "Dataquest is the perfect platform to learn about data science by applying newly acquired python principles to real world data!
+										p "Dataquest is the perfect platform to learn about data science by applying newly acquired python principles to real world data!"
 									.reply_autor
 										p Glenn V.
-					+loop_while(6)
 						li.reply_item
 							.reply_block
 								.reply_autor_i_w
@@ -174,7 +116,7 @@ block content_block
 			ul.price_main_list
 				li.price_main_item
 					.price_main_block
-						.price_main_title Free
+						h3.price_main_title Free
 						ul.price_includes_list
 							li.price_include_item
 								span.price_include_item_in.free_mod Benefit #1
@@ -187,7 +129,7 @@ block content_block
 						a(href="#").price_get_butt Get started
 				li.price_main_item
 					.price_main_block
-						.price_main_title 30$ / Monthly
+						h3.price_main_title 30$ / Monthly
 						ul.price_includes_list
 							li.price_include_item
 								span.price_include_item_in.free_mod Benefit #1

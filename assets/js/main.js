@@ -83,6 +83,8 @@ function fadeSliderInit(target) {
 
 		var array_push_var={
 			'element': $this,
+			'element_text_1': $('.head_slide_fist_part', $this),
+			'element_text_2': $('.head_slide_sec_part', $this),
 			'element_state':$this_index + 1,
 			'element_number':$this_index + 1
 		};
@@ -94,7 +96,7 @@ function fadeSliderInit(target) {
 	target.bxSlider({
 		mode: 'fade',
 		speed:333,
-		pause:2000,
+		pause:6000,
 		controls: false,
 		onlystate: true,
 		auto: true,
@@ -114,7 +116,6 @@ function fadeSliderInit(target) {
 		},
 		onSlideAfter: function ($slideElement, oldIndex, newIndex) {
 			state_anim(newIndex);
-			console.log(newIndex);
 		}
 
 	});
@@ -153,7 +154,7 @@ function state_anim(active){
 			main_slider_active_el = active;
 			if(main_slider_array[i].element_state == 1){
 
-				main_slider_array[i].element_state = main_slider_array.length - main_slider_array[i].element_state;
+				main_slider_array[i].element_state = main_slider_array.length;
 
 				step_x_from = 0;
 				step_x_to = step_x_to * -1;
@@ -161,7 +162,10 @@ function state_anim(active){
 				step_y_to = step_y_to * -1;
 				$opacity_from = 1;
 				$opacity_to = 0;
-				$zindex = 100;
+				$zindex = 0;
+
+				main_slider_array[i].element_text_1.removeClass('active_mod');
+				main_slider_array[i].element_text_2.removeClass('active_mod');
 
 			} else if(main_slider_array[i].element_state == 2){
 				main_slider_array[i].element_state = 1;
@@ -173,6 +177,9 @@ function state_anim(active){
 				$opacity_from = .5;
 				$opacity_to = 1;
 				$zindex = 50;
+
+				main_slider_array[i].element_text_1.addClass('active_mod');
+				main_slider_array[i].element_text_2.addClass('active_mod');
 
 			} else if(main_slider_array[i].element_state == 3){
 				main_slider_array[i].element_state = 2;
@@ -197,6 +204,8 @@ function state_anim(active){
 				$zindex = 1;
 
 			} else if (main_slider_array[i].element_state > 4) {
+				main_slider_array[i].element_state = main_slider_array[i].element_state - 1;
+
 				step_x_from = 0;
 				step_x_to = step_x_to * 3;
 				step_y_from = 0;
@@ -207,18 +216,7 @@ function state_anim(active){
 				$zindex = 0;
 			}
 			console.log(main_slider_array[i].element);
-		if (main_slider_array[i].element_state == 1) {
-			main_slider_array[i].element.css('zIndex', $zindex).snabbt({
-				fromPosition: [step_x_from, step_y_from, 0],
-				position: [step_x_to, step_y_to, 0],
-				fromOpacity: $opacity_from,
-				opacity: $opacity_to,
-				easing: 'easeOut',
-				duration: $duration
-			});
 
-		}
-		else {
 			main_slider_array[i].element.css('zIndex', $zindex).snabbt({
 				fromPosition: [step_x_from, step_y_from, 0],
 				position: [step_x_to, step_y_to, 0],
@@ -227,7 +225,6 @@ function state_anim(active){
 				easing: 'easeOut',
 				duration: $duration
 			});
-		}
 
 		//} else if(main_slider_active_el > active) {
 		//	main_slider_active_el = active;
