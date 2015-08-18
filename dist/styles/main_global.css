@@ -538,21 +538,6 @@ p {
   -webkit-transform: translate(84rem, 90rem);
       -ms-transform: translate(84rem, 90rem);
           transform: translate(84rem, 90rem); }
-  .head_slider_item:nth-child(1) {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1; }
-  .head_slider_item:nth-child(2) {
-    opacity: .5;
-    -webkit-transform: translate(28rem, 30rem);
-        -ms-transform: translate(28rem, 30rem);
-            transform: translate(28rem, 30rem); }
-  .head_slider_item:nth-child(3) {
-    opacity: .1;
-    -webkit-transform: translate(56rem, 60rem);
-        -ms-transform: translate(56rem, 60rem);
-            transform: translate(56rem, 60rem); }
 
 .head_slider_item_in {
   position: absolute;
