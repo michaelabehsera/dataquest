@@ -83,7 +83,8 @@ function fadeSliderInit(target) {
 
 		var array_push_var={
 			'element': $this,
-			'element_state':$this_index + 1
+			'element_state':$this_index + 1,
+			'element_number':$this_index + 1
 		};
 		main_slider_array.push(array_push_var);
 
@@ -97,9 +98,13 @@ function fadeSliderInit(target) {
 		controls: false,
 		onlystate: true,
 		auto: true,
+		onSliderLoad: function () {
+			state_anim(0);
+		},
 		onSlideNext: function ($slideElement, oldIndex, newIndex) {
 			//console.log($slideElement, oldIndex, newIndex);
-			state_anim(newIndex);
+
+
 		},
 		onSlidePrev: function ($slideElement, oldIndex, newIndex) {
 			console.log($slideElement, oldIndex, newIndex);
@@ -109,8 +114,7 @@ function fadeSliderInit(target) {
 		},
 		onSlideAfter: function ($slideElement, oldIndex, newIndex) {
 			state_anim(newIndex);
-
-			//$slideElement.addClass('active_slide').siblings().removeClass('active_slide');
+			console.log(newIndex);
 		}
 
 	});
@@ -142,7 +146,8 @@ function state_anim(active){
 				step_y_to = 30 * rem,
 				$opacity_from = 0,
 				$opacity_to = 0,
-				$duration = 330;
+				$duration = 330,
+				$zindex;
 
 		//if (main_slider_active_el < active) {
 			main_slider_active_el = active;
@@ -156,6 +161,7 @@ function state_anim(active){
 				step_y_to = step_y_to * -1;
 				$opacity_from = 1;
 				$opacity_to = 0;
+				$zindex = 100;
 
 			} else if(main_slider_array[i].element_state == 2){
 				main_slider_array[i].element_state = 1;
@@ -166,6 +172,7 @@ function state_anim(active){
 				step_y_to = 0;
 				$opacity_from = .5;
 				$opacity_to = 1;
+				$zindex = 50;
 
 			} else if(main_slider_array[i].element_state == 3){
 				main_slider_array[i].element_state = 2;
@@ -176,6 +183,7 @@ function state_anim(active){
 				//step_y_to = step_y_to;
 				$opacity_from = .1;
 				$opacity_to = .5;
+				$zindex = 2;
 
 			} else if (main_slider_array[i].element_state == 4) {
 				main_slider_array[i].element_state = 3;
@@ -186,6 +194,7 @@ function state_anim(active){
 				step_y_to = step_y_to * 2;
 				$opacity_from = 0;
 				$opacity_to = .1;
+				$zindex = 1;
 
 			} else if (main_slider_array[i].element_state > 4) {
 				step_x_from = 0;
@@ -195,9 +204,11 @@ function state_anim(active){
 				$opacity_from = 0;
 				$opacity_to = 0;
 				$duration = 0;
+				$zindex = 0;
 			}
-
-			main_slider_array[i].element.snabbt({
+			console.log(main_slider_array[i].element);
+		if (main_slider_array[i].element_state == 1) {
+			main_slider_array[i].element.css('zIndex', $zindex).snabbt({
 				fromPosition: [step_x_from, step_y_from, 0],
 				position: [step_x_to, step_y_to, 0],
 				fromOpacity: $opacity_from,
@@ -205,6 +216,19 @@ function state_anim(active){
 				easing: 'easeOut',
 				duration: $duration
 			});
+
+		}
+		else {
+			main_slider_array[i].element.css('zIndex', $zindex).snabbt({
+				fromPosition: [step_x_from, step_y_from, 0],
+				position: [step_x_to, step_y_to, 0],
+				fromOpacity: $opacity_from,
+				opacity: $opacity_to,
+				easing: 'easeOut',
+				duration: $duration
+			});
+		}
+
 		//} else if(main_slider_active_el > active) {
 		//	main_slider_active_el = active;
 		//}
