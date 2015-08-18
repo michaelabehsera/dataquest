@@ -250,7 +250,7 @@ function move_to_block(block, control) {
 	$control.on('click', function () {
 		var $block_pos = $block.offset();
 		$('body,html').animate({
-			scrollTop: $block_pos.top - header_menu_height
+			scrollTop: $block_pos.top
 		}, 500);
 		return false;
 	})
