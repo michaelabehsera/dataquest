@@ -8,12 +8,14 @@ var rem = 1,
 	learn_section,
 	learn_offset,
 	$user_menu_butt,
+	bulb_array = [],
 	main_slider_array = [],
 	main_slider_active_el = 0,
 	media_point_1 = 1024,
 	media_point_2 = 768,
 	media_point_3 = 480,
 	media_point_4 = 320;
+
 
 
 $(document).ready(function ($) {
@@ -58,11 +60,57 @@ $(window).on('load', function () {
 	vertSliderInit($('#reply_slider'));
 
 	move_to_block('#learn_section_w', '#learn_scroll_link');
+
+	//bulb_animation();
 });
 
 $(window).on('scroll', function () {
 	scroll_function();
 });
+
+function bulb_animation() {
+	$('.head_slider_circle').each(function () {
+		var $this = $(this);
+
+		var array_push_var = {
+			'element': $this
+		};
+
+		bulb_array.push(array_push_var);
+
+		console.log(bulb_array);
+	});
+
+	for (var i = 0; i < bulb_array.length; i++) {
+		animation(i);
+	}
+
+	function animation(i){
+		var $random = Math.floor(Math.random() * 1000);
+		console.log($random);
+		bulb_array[i].element.snabbt({
+			fromPosition: [0, window_height / 2, 0],
+			position: [0, -window_height / 5 + 200, 0],
+			easing: 'ease',
+			duration: 10000,
+			delay: 10 * $random
+		}).then({
+			fromPosition: [0, -window_height / 5 + 200, 0],
+			position: [0, -window_height / 5, 0],
+			fromScale: [1, 1],
+			scale: [0, 0],
+			fromOpacity: 1,
+			opacity: 0,
+			easing: 'easeOut',
+			duration: 3000,
+			callback: function () {
+				animation(i);
+			}
+		});
+	}
+
+}
+
 
 
 function scroll_function() {

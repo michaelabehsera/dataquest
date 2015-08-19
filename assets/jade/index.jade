@@ -31,16 +31,10 @@ block content_block
 					-n++
 
 		.head_slider_decor_block
-			.head_slider_circle.mod_1
-			.head_slider_circle.mod_2
-			.head_slider_circle.mod_3
-			.head_slider_circle.mod_4
-			.head_slider_circle.mod_5
-			.head_slider_circle.mod_6
-			.head_slider_circle.mod_7
-			.head_slider_circle.mod_8
-			.head_slider_circle.mod_9
-			.head_slider_circle.mod_10
+			-var a = 1
+			while a < 21
+				.head_slider_circle(class='mod_#{a}')
+				-a++
 		a(href="#").head_slider_more_link#learn_scroll_link Learn more
 	.learn_section_w#learn_section_w
 		section.learn_section

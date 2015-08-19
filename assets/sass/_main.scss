@@ -313,75 +313,188 @@ p{
 	@extend %stretch;
 
 	z-index: 5;
-}
 
+	overflow: hidden;
+
+	transform: translateZ(0);
+}
+$time:12s;
 .head_slider_circle {
-	position: absolute;
 	z-index: 0;
+	position: absolute;
 	background: $black;
 	opacity: .15;
 	border-radius: 50%;
+	transform: translate3d(0, 40vh, 0);
+	will-change: transform;
+	animation: bulb $time ease-in infinite;
+
 	&.mod_1 {
 		bottom: 50rem;
 		left: percentage(80rem/1800rem);
 		height: 28rem;
 		width: 28rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_2 {
 		bottom: 136rem;
 		left: percentage(444rem/1800rem);
 		height: 62rem;
 		width: 62rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_3 {
 		bottom: 170rem;
-		left: percentage(480rem/1800rem);
+		right: percentage(480rem/1800rem);
 		height: 46rem;
 		width: 46rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_4 {
 		bottom: 321rem;
 		left: percentage(866rem/1800rem);
 		height: 62rem;
 		width: 62rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_5 {
 		bottom: 60rem;
 		right: percentage(790rem/1800rem);
 		height: 19rem;
 		width: 19rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_6 {
 		bottom: 129rem;
 		right: percentage(511rem/1800rem);
 		height: 62rem;
 		width: 62rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_7 {
-		bottom: 530rem;
-		right: percentage(262rem/1800rem);
+		bottom: 400rem;
+		left: percentage(262rem/1800rem);
 		height: 20rem;
 		width: 20rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_8 {
 		bottom: 194rem;
 		right: percentage(126rem/1800rem);
 		height: 28rem;
 		width: 28rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_9 {
-		bottom: 408rem;
-		right: percentage(65rem/1800rem);
+		bottom: 350rem;
+		left: percentage(65rem/1800rem);
 		height: 86rem;
 		width: 86rem;
+		animation-delay:random($time)+ s;
 	}
 	&.mod_10 {
 		bottom: 167rem;
 		left: percentage(34rem/1800rem);
 		height: 8rem;
 		width: 8rem;
+		animation-delay:random($time)+ s;
+	}
+
+	&.mod_20 {
+			bottom: 50rem;
+			left: percentage(80rem/1800rem);
+			height: 28rem;
+			width: 28rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_19 {
+			bottom: 136rem;
+			left: percentage(444rem/1800rem);
+			height: 62rem;
+			width: 62rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_18 {
+			bottom: 170rem;
+			left: percentage(480rem/1800rem);
+			height: 46rem;
+			width: 46rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_17 {
+			bottom: 321rem;
+			left: percentage(866rem/1800rem);
+			height: 62rem;
+			width: 62rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_16 {
+			bottom: 60rem;
+			right: percentage(790rem/1800rem);
+			height: 19rem;
+			width: 19rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_15 {
+			bottom: 129rem;
+			right: percentage(511rem/1800rem);
+			height: 62rem;
+			width: 62rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_14 {
+			bottom: 400rem;
+			right: percentage(262rem/1800rem);
+			height: 20rem;
+			width: 20rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_13 {
+			bottom: 194rem;
+			right: percentage(126rem/1800rem);
+			height: 28rem;
+			width: 28rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_12 {
+			bottom: 350rem;
+			right: percentage(65rem/1800rem);
+			height: 86rem;
+			width: 86rem;
+			animation-delay:random($time)+ s;
+		}
+		&.mod_11 {
+			bottom: 167rem;
+			left: percentage(34rem/1800rem);
+			height: 8rem;
+			width: 8rem;
+			animation-delay:random($time)+ s;
+		}
+}
+
+
+
+@keyframes bulb {
+	from {
+		transform: translate3d(0, 40vh, 0) scale(1);
+	}
+
+	to {
+		transform: translate3d(0, -30vh, 0) scale(0);
 	}
 }
+
+//@keyframes bulb_sub {
+//	from {
+//		transform: scale(1);
+//	}
+//	60%{
+//		transform: scale(1);
+//	}
+//	to {
+//		transform: scale(0);
+//	}
+//}
 
 .head_slider_more_link {
 	position: absolute;
