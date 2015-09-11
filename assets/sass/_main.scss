@@ -34,12 +34,12 @@ a {
 	}
 }
 
-h2, h3, h4{
+h2, h3, h4 {
 	font-weight: 700;
 	color: $gray_2;
 }
 
-p{
+p {
 	color: $def_text_color;
 	line-height: 1.78;
 }
@@ -90,11 +90,11 @@ p{
 
 }
 
-.head_slider_list_w{
+.head_slider_list_w {
 	height: calc(100vh - #{$header_height});
 	width: calc(50% - 70rem);
 
-	.bx-viewport{
+	.bx-viewport {
 		overflow: visible !important;
 	}
 }
@@ -109,41 +109,41 @@ p{
 	opacity: 0;
 	transform: translate(28rem*3, 30rem*3);
 
-//	&:nth-child(1){
-//		transform: translate(0, 0);
-//		opacity: 1;
-//	}
-//
-//	&:nth-child(2){
-//		opacity: .5;
-//		transform: translate(28rem ,30rem);
-//	}
-//
-//	&:nth-child(3) {
-//		opacity: .1;
-//		transform: translate(28rem*2, 30rem*2);
-//	}
+	//	&:nth-child(1){
+	//		transform: translate(0, 0);
+	//		opacity: 1;
+	//	}
+	//
+	//	&:nth-child(2){
+	//		opacity: .5;
+	//		transform: translate(28rem ,30rem);
+	//	}
+	//
+	//	&:nth-child(3) {
+	//		opacity: .1;
+	//		transform: translate(28rem*2, 30rem*2);
+	//	}
 
-//	&.active_slide {
-//		z-index: 60 !important;
-//		display:list-item !important;
-//		opacity:1;
-//	}
-//	&.next_slide {
-//		z-index: 50 !important;
-//		display:list-item !important;
-//		opacity:1;
-//	}
-//	&.next_sec_slide {
-//		z-index: 40 !important;
-//		display:list-item !important;
-//		opacity:1;
-//	}
-//	&.prev_slide {
-//		z-index: 30 !important;
-//		display: list-item !important;
-//		opacity:0;
-//	}
+	//	&.active_slide {
+	//		z-index: 60 !important;
+	//		display:list-item !important;
+	//		opacity:1;
+	//	}
+	//	&.next_slide {
+	//		z-index: 50 !important;
+	//		display:list-item !important;
+	//		opacity:1;
+	//	}
+	//	&.next_sec_slide {
+	//		z-index: 40 !important;
+	//		display:list-item !important;
+	//		opacity:1;
+	//	}
+	//	&.prev_slide {
+	//		z-index: 30 !important;
+	//		display: list-item !important;
+	//		opacity:0;
+	//	}
 }
 
 .head_slider_item_in {
@@ -176,7 +176,7 @@ p{
 	line-height: 2;
 	color: $white;
 
-	p{
+	p {
 		color: $white;
 	}
 }
@@ -202,29 +202,29 @@ p{
 	border-radius: $br_global;
 	overflow: hidden;
 
-//	transform:translate(90rem,90rem);
-//	transition:all .3s ease;
-//	opacity:0;
+	//	transform:translate(90rem,90rem);
+	//	transition:all .3s ease;
+	//	opacity:0;
 
-//	.active_slide & {
-//		transform:translate(0,0) scale(1);
-//		opacity:1;
-//	}
-//
-//	.next_slide & {
-//		transform:translate(30rem,30rem) scale(.95);
-//		opacity:1;
-//	}
-//
-//	.next_sec_slide & {
-//		transform:translate(60rem,60rem) scale(.9);
-//		opacity:1;
-//	}
-//
-//	.prev_slide & {
-//		transform:translate(-30rem,-30rem) scale(1);
-//		opacity:1;
-//	}
+	//	.active_slide & {
+	//		transform:translate(0,0) scale(1);
+	//		opacity:1;
+	//	}
+	//
+	//	.next_slide & {
+	//		transform:translate(30rem,30rem) scale(.95);
+	//		opacity:1;
+	//	}
+	//
+	//	.next_sec_slide & {
+	//		transform:translate(60rem,60rem) scale(.9);
+	//		opacity:1;
+	//	}
+	//
+	//	.prev_slide & {
+	//		transform:translate(-30rem,-30rem) scale(1);
+	//		opacity:1;
+	//	}
 }
 
 .head_course_title_w {
@@ -233,26 +233,27 @@ p{
 }
 
 .head_course_title {
-	@extend %icon-book;
-
 	position: relative;
 	color: $white;
 	font-weight: 700;
 	line-height: 1;
-	opacity:0;
+	opacity: 0;
 
 	.head_slide_sec_part.active_mod & {
-		opacity:1;
+		opacity: 1;
 	}
 
-	&:before {
+	.book_icon {
+		@extend %translate3d;
+
 		position: relative;
-		display: inline-block;
-		font-size: 20rem;
-		top: -1px;
-		margin: 0 10rem 0 0;
-		vertical-align: middle;
+		top: 2rem;
 	}
+}
+
+.head_course_title_in {
+	display: inline-block;
+	padding: 0 0 0 $gl_indent;
 }
 
 .head_course_text_w {
@@ -263,11 +264,10 @@ p{
 
 .head_cource_text_title {
 	font-size: 18rem;
-	opacity:0;
-
+	opacity: 0;
 
 	.head_slide_sec_part.active_mod & {
-		opacity:1;
+		opacity: 1;
 	}
 }
 
@@ -276,37 +276,33 @@ p{
 	line-height: 1.5;
 	opacity: 0;
 
-
 	.head_slide_sec_part.active_mod & {
-		opacity:1;
+		opacity: 1;
 	}
 }
 
 .head_course_more_butt {
-	@extend %icon-arrow_right;
-
 	position: absolute;
 	bottom: $gl_indent*2.6;
 	right: $gl_indent*2.6;
-	color: $gray;
 	transition: all .3s ease;
-	opacity:0;
-	visibility:hidden;
-	font-size: 20rem;
-
+	opacity: 0;
+	visibility: hidden;
 
 	.head_slide_sec_part.active_mod & {
-		opacity:1;
-		visibility:visible;
+		opacity: 1;
+		visibility: visible;
 	}
 
 	&:hover, &:focus {
 		text-decoration: none;
 	}
+	.right_arrow_icon {
+		@extend %translate3d;
 
-	&:hover {
-		color: $def_text_color;
+		fill: $gray;
 	}
+
 }
 
 .head_slider_decor_block {
@@ -318,7 +314,8 @@ p{
 
 	transform: translateZ(0);
 }
-$time:12s;
+
+$time: 12s;
 .head_slider_circle {
 	z-index: 0;
 	position: absolute;
@@ -334,145 +331,143 @@ $time:12s;
 		left: percentage(80rem/1800rem);
 		height: 28rem;
 		width: 28rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_2 {
 		bottom: 136rem;
 		left: percentage(444rem/1800rem);
 		height: 62rem;
 		width: 62rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_3 {
 		bottom: 170rem;
 		right: percentage(480rem/1800rem);
 		height: 46rem;
 		width: 46rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_4 {
 		bottom: 321rem;
 		left: percentage(866rem/1800rem);
 		height: 62rem;
 		width: 62rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_5 {
 		bottom: 60rem;
 		right: percentage(790rem/1800rem);
 		height: 19rem;
 		width: 19rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_6 {
 		bottom: 129rem;
 		right: percentage(511rem/1800rem);
 		height: 62rem;
 		width: 62rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_7 {
 		bottom: 400rem;
 		left: percentage(262rem/1800rem);
 		height: 20rem;
 		width: 20rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_8 {
 		bottom: 194rem;
 		right: percentage(126rem/1800rem);
 		height: 28rem;
 		width: 28rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_9 {
 		bottom: 350rem;
 		left: percentage(65rem/1800rem);
 		height: 86rem;
 		width: 86rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 	&.mod_10 {
 		bottom: 167rem;
 		left: percentage(34rem/1800rem);
 		height: 8rem;
 		width: 8rem;
-		animation-delay:random($time)+ s;
+		animation-delay: random($time)+ s;
 	}
 
 	&.mod_20 {
-			bottom: 50rem;
-			left: percentage(80rem/1800rem);
-			height: 28rem;
-			width: 28rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_19 {
-			bottom: 136rem;
-			left: percentage(444rem/1800rem);
-			height: 62rem;
-			width: 62rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_18 {
-			bottom: 170rem;
-			left: percentage(480rem/1800rem);
-			height: 46rem;
-			width: 46rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_17 {
-			bottom: 321rem;
-			left: percentage(866rem/1800rem);
-			height: 62rem;
-			width: 62rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_16 {
-			bottom: 60rem;
-			right: percentage(790rem/1800rem);
-			height: 19rem;
-			width: 19rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_15 {
-			bottom: 129rem;
-			right: percentage(511rem/1800rem);
-			height: 62rem;
-			width: 62rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_14 {
-			bottom: 400rem;
-			right: percentage(262rem/1800rem);
-			height: 20rem;
-			width: 20rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_13 {
-			bottom: 194rem;
-			right: percentage(126rem/1800rem);
-			height: 28rem;
-			width: 28rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_12 {
-			bottom: 350rem;
-			right: percentage(65rem/1800rem);
-			height: 86rem;
-			width: 86rem;
-			animation-delay:random($time)+ s;
-		}
-		&.mod_11 {
-			bottom: 167rem;
-			left: percentage(34rem/1800rem);
-			height: 8rem;
-			width: 8rem;
-			animation-delay:random($time)+ s;
-		}
+		bottom: 50rem;
+		left: percentage(80rem/1800rem);
+		height: 28rem;
+		width: 28rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_19 {
+		bottom: 136rem;
+		left: percentage(444rem/1800rem);
+		height: 62rem;
+		width: 62rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_18 {
+		bottom: 170rem;
+		left: percentage(480rem/1800rem);
+		height: 46rem;
+		width: 46rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_17 {
+		bottom: 321rem;
+		left: percentage(866rem/1800rem);
+		height: 62rem;
+		width: 62rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_16 {
+		bottom: 60rem;
+		right: percentage(790rem/1800rem);
+		height: 19rem;
+		width: 19rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_15 {
+		bottom: 129rem;
+		right: percentage(511rem/1800rem);
+		height: 62rem;
+		width: 62rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_14 {
+		bottom: 400rem;
+		right: percentage(262rem/1800rem);
+		height: 20rem;
+		width: 20rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_13 {
+		bottom: 194rem;
+		right: percentage(126rem/1800rem);
+		height: 28rem;
+		width: 28rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_12 {
+		bottom: 350rem;
+		right: percentage(65rem/1800rem);
+		height: 86rem;
+		width: 86rem;
+		animation-delay: random($time)+ s;
+	}
+	&.mod_11 {
+		bottom: 167rem;
+		left: percentage(34rem/1800rem);
+		height: 8rem;
+		width: 8rem;
+		animation-delay: random($time)+ s;
+	}
 }
-
-
 
 @keyframes bulb {
 	from {
@@ -557,7 +552,6 @@ $time:12s;
 	padding: 0 $gl_indent*1.4;
 
 	@include grid_item(1/3);
-	@include flex_block(column, nowrap, flex-start, flex-start);
 	@include bp($point_2) {
 		margin: $gl_indent*2.6 0 0 0;
 
@@ -572,12 +566,15 @@ $time:12s;
 .learn_block {
 	@extend %st_shadow_2;
 
-	flex: 1 1 auto;
-	height: 100%;
 	width: 100%;
+	min-height:380rem;
 	padding: $gl_indent*4.4 $gl_indent*2.6 $gl_indent*8.8;
 	background: $white;
 	border-radius: $br_global;
+
+	@include bp($point_2) {
+		min-height: 0;
+	}
 }
 
 .learn_title {
@@ -588,21 +585,38 @@ $time:12s;
 	text-align: center;
 
 	&:before {
-		@extend %hor_centr;
-
+		content: '';
 		position: absolute;
 		top: 0;
-		font-size: 43rem;
+		left: 50%;
 	}
 
 	&.lightning_mod {
-		@extend %icon-power;
+		&:before {
+			width: 26rem;
+			height: 38rem;
+			margin-left: -13rem;
+			background: url('../i/icons/power.svg');
+			background-size: cover;
+		}
 	}
 	&.grad_mod {
-		@extend %icon-gradient;
+		&:before {
+			width: 40rem;
+			height: 40rem;
+			margin-left: -20rem;
+			background: url('../i/icons/gradient.svg');
+			background-size: cover;
+		}
 	}
 	&.clock_mod {
-		@extend %icon-chart;
+		&:before {
+			width: 38rem;
+			height: 38rem;
+			margin-left: -19rem;
+			background: url('../i/icons/chart.svg');
+			background-size: cover;
+		}
 	}
 }
 
@@ -657,7 +671,6 @@ $time:12s;
 	padding: $gl_indent*1.2;
 
 	@include grid_item(1/3);
-	@include flex_block(column, nowrap, flex-start, flex-start);
 	@include bp($point_1) {
 		@include grid_item(1/2);
 	}
@@ -668,9 +681,9 @@ $time:12s;
 
 .course_block {
 	position: relative;
-	flex: 1 1 auto;
-	height: 100%;
+	display: block;
 	width: 100%;
+	min-height:130rem;
 	padding: $gl_indent*2;
 	color: $def_text_color;
 	background: $light_gray;
@@ -685,13 +698,16 @@ $time:12s;
 		background: $green_2;
 		color: $white;
 
-		p{
+		p {
 			color: $white;
 		}
 
-		.course_title{
+		.course_title {
 			color: $white;
 		}
+	}
+	@include bp($point_2) {
+		min-height: 0;
 	}
 }
 
@@ -707,8 +723,6 @@ $time:12s;
 }
 
 .course_icon {
-	@extend %icon-box;
-
 	position: absolute;
 	width: 34rem;
 	height: 34rem;
@@ -717,13 +731,6 @@ $time:12s;
 	color: $white;
 	border-radius: 50%;
 	transition: all .3s ease;
-
-	&:before {
-		@extend %hor_vert_centr;
-
-		position: absolute;
-		font-size: 20rem;
-	}
 
 	&.green_1_mod {
 		background: $green;
@@ -747,22 +754,31 @@ $time:12s;
 		background: $blue_4;
 	}
 
+	.box_icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 16rem;
+		height: 16rem;
+		margin-top: -8rem;
+		margin-left: -8rem;
+		fill: $white;
+		transform: translateZ(0);
+	}
+
 	.course_block:hover & {
 		background: $light_green_2;
 	}
 }
 
 .course_link_decor {
-	@extend %icon-arrow_right;
-
-	color: $light_gray;
 	position: absolute;
 	right: 16rem;
 	bottom: 18rem;
 	transition: all .3s ease;
 
-	&:hover {
-		color: $white;
+	.right_arrow_icon {
+		fill: $light_gray;
 	}
 }
 
@@ -803,7 +819,7 @@ $time:12s;
 	color: $white;
 	line-height: 25rem;
 
-	p{
+	p {
 		color: $white;
 	}
 }
@@ -910,7 +926,7 @@ $time:12s;
 	padding: 0 $gl_indent*7 0 0;
 
 	@include bp($point_2) {
-		width:100%;
+		width: 100%;
 		padding: 0 0 $gl_indent*2.6 0;
 	}
 }
@@ -945,10 +961,10 @@ $time:12s;
 
 	@include flex_block(row, nowrap, flex-start, stretch);
 	@include bp($point_2) {
-		width:100%;
+		width: 100%;
 	}
 	@include bp($point_3) {
-		box-shadow:none;
+		box-shadow: none;
 
 		@include flex_block(row, wrap, flex-start, stretch);
 	}
@@ -957,6 +973,7 @@ $time:12s;
 .price_main_item {
 	flex: 0 0 auto;
 	width: 50%;
+	min-height: 600rem;
 	padding: $gl_indent*3.6;
 	background: $white;
 
@@ -969,11 +986,11 @@ $time:12s;
 		@extend %st_shadow_2;
 
 		width: 100%;
-		margin:$gl_indent*2.6 0 0 0;
+		margin: $gl_indent*2.6 0 0 0;
 
 		&:first-child {
 			margin: 0;
-			border-right:none;
+			border-right: none;
 		}
 	}
 }
@@ -1029,10 +1046,10 @@ $time:12s;
 
 	position: absolute;
 	bottom: $gl_indent*3.3;
-	left:50%;
+	left: 50%;
 	display: block;
 	width: 160rem;
-	transform:translate(-50%,0);
+	transform: translate(-50%, 0);
 }
 
 //------------------------------------------------------------price section###
