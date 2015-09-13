@@ -1,0 +1,87 @@
+extends _layout
+include templates/_global_mixins
+include templates/_global_vars
+include templates/_project_mixins
+include templates/_project_vars
+block vars
+	- var array = {body_class:'', layuot_mod:'', sub_keywords:'',title_inner:'Title of the page'}
+block content_block
+	.page_head_block.full_height_mod
+		.page_head_block_in
+			h2.page_head_title Learn real-world data science skills
+			.page_head_title_def Gain the experience and knowledge you need to take your career to the next level.
+			a(href="#").page_head_start_butt Get started
+		.head_slider_decor_block
+			-var a = 1
+			while a < 21
+				.head_slider_circle(class='mod_#{a}')
+				-a++
+		a(href="#tracks_section_w").scrollTo.page_head_scroll_link
+	.tracks_section_w.headerTriggerPoint#tracks_section_w
+		section.tracks_section
+			h2.section_title.black_mod Tracks
+			.section_title_def.black_mod
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+			ul.tracks_list
+				+track_item('light_green_mod','Data Analyst')
+				+track_item('green_mod','Data Scientist')
+				+track_item('blue_mod','Data Engineer')
+				li.track_item.add_mod
+					a(href="#").track_add_block
+						.track_add_title More Coming Soon...
+							span.track_add_icon
+	.reply_section_w#reply_section_w
+		section.reply_section
+			h2.section_title.white_mod.sm_mod Hear From Our Users
+			ul.reply_list
+				-var i = 1
+				while i<=3
+					li.reply_item
+						.reply_block
+							.reply_text_block
+								.reply_text
+									p "Dataquest is the perfect platform to learn about data science by applying newly acquired python principles to real world data!"
+								.reply_autor
+									p Glenn V.
+							.reply_autor_i_w
+								img(alt="" src="i/client_1.png").reply_autor_i
+								- i++
+	.learn_section_w#learn_section_w
+		section.learn_section
+			h2.section_title.st_mod Learn more
+			.learn_section_def
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+			ul.learn_list
+				li.learn_item
+					.learn_block
+						h2.learn_title Stay Motivated
+							span.learn_title_icon.green_mod
+								+power_icon('white_mod')
+						.learn_text
+							p Learn data science by finding the answers to interesting questions, like "which airline is delayed the most?", and "what writing patterns are in CIA documents?".
+				li.learn_item
+					.learn_block
+						h2.learn_title Learn by Doing
+							span.learn_title_icon.yellow_mod
+								img(alt="" src="i/reading_big.png").reading_icon
+						.learn_text
+							p Learn interactively. You'll be writing real python code within minutes, all on our interactive coding and data analysis platform. We only have a few videos, and they're as short as we can make them.
+				li.learn_item
+					.learn_block
+						h2.learn_title Develop real-world skill
+							span.learn_title_icon.light_green_mod
+								+chart_icon('white_mod')
+						.learn_text
+							p We give you real datasets and problems, and help teach you how to solve them. You'll learn skills that you can immediately apply. The best way to learn data science is to work with actual data.
+			.product_feat_block
+				h3.product_feat_block_title
+					span Product Features
+				ul.product_feat_list
+					+product_feat_item('Interactive learning environment','box')
+					+product_feat_item('Personalized learning tracks','palette')
+					+product_feat_item('Real datasets','heart')
+					+product_feat_item('Not just syntax','pen')
+					+product_feat_item('Supportive community','chart')
+					+product_feat_item('Personalized mentorship','shield')
+
+

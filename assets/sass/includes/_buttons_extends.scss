@@ -1,12 +1,27 @@
-%butt_v1 {
+//------------------------------------------------------------button sizes
+%butt_size_1 {
+	display: block;
 	height: 52rem;
 	padding: 0 $gl_indent*3.4;
-	color:$white;
 	line-height: 52rem;
+	font-size: 16rem;
 	text-align: center;
-	background: $green;
-	font-weight: 700;
 	border-radius: 3rem;
+}
+%butt_size_2 {
+	display: block;
+	height: 44rem;
+	padding: 0 $gl_indent*2;
+	line-height: 44rem;
+	font-size: 16rem;
+	text-align: center;
+	border-radius: 3rem;
+}
+//------------------------------------------------------------button sizes###
+//------------------------------------------------------------button color schemes
+%butt_color_1 {
+	color:$white;
+	background: $green;
 	transition:background .3s ease;
 
 	&:hover,&:focus {
@@ -17,4 +32,18 @@
 		background: darken($green, 10%);
 	}
 }
+%butt_color_2 {
+	color:$white;
+	background: $green_2;
+	transition:background .3s ease;
+
+	&:hover,&:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background: darken($green_2, 5%);
+	}
+}
+//------------------------------------------------------------button color schemes###
 

@@ -9,6 +9,10 @@
 		@include flex_block(row, wrap, flex-start);
 	}
 
+	%global_flex_block_row_wrap_flex-start_center {
+		@include flex_block(row, wrap, flex-start,center);
+	}
+
 	%global_flex_block_row_wrap_flex-end {
 		@include flex_block(row, wrap, flex-end);
 	}
@@ -258,4 +262,10 @@
 			}
 	}
 
+}
+%transition_background {
+	transition:background .3s ease;
+}
+%transition_color {
+	transition:color .3s ease;
 }

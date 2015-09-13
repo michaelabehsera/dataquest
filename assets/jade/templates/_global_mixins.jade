@@ -18,17 +18,21 @@ mixin head(array)
 		link(rel="apple-touch-icon", sizes="120x120", href="apple-touch-icon-120x120.png")
 		link(rel="apple-touch-icon", sizes="144x144", href="apple-touch-icon-144x144.png")
 		link(rel="apple-touch-icon", sizes="152x152", href="apple-touch-icon-152x152.png")
+
+	|<script src="//use.typekit.net/fxd1lwt.js"></script>
+	|<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	link(rel="stylesheet" media="all" href="styles/main_global.css")
+
+
+mixin scripts
 	if jQuery
 		script(src='js/jquery-1.11.1.min.js')
 	if jQueryUI
 		script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
 	if modernizr
 		script(src="js/modernizr.2.js")
-	|<script src="//use.typekit.net/fxd1lwt.js"></script>
-	|<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	link(rel="stylesheet" media="all" href="styles/main_global.css")
-	script(src="js/jquery.bxslider.js")
-	script(src="js/snabbt.min.js")
+	//script(src="js/jquery.bxslider.min.js")
+	//script(src="js/snabbt.min.js")
 	script(src='js/main.js')
 
 mixin banner

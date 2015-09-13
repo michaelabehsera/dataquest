@@ -75,7 +75,8 @@ gulp.task('browser-sync', function() {
 	browserSync.init({
 		port:1337,
 		server: {
-			baseDir: outputDir
+			baseDir: outputDir,
+			index:'home.html'
 		}
 	});
 });
@@ -121,7 +122,7 @@ gulp.task('jsBuild', function() {
 gulp.task('cssBuild', function() {
 	return gulp.src(outputDir+'styles/**/*')
 		.pipe(purify([outputDir+'js/**/*', outputDir+'**/*.html']))
-		// .pipe(csso())
+		.pipe(csso())
 		.pipe(gulp.dest(buildDir + 'styles/'))
 });
 
