@@ -1,0 +1,170 @@
+extends _layout
+include templates/_global_mixins
+include templates/_global_vars
+include templates/_project_mixins
+include templates/_project_vars
+block vars
+	- var array = {body_class:'', layuot_mod:'', sub_keywords:'',title_inner:'Title of the page'}
+block content_block
+	.page_head_block.auto_height_mod
+		.page_head_block_in
+			h2.page_head_title Learn data analysis for marketers
+			.page_head_title_def This course will help you understand how to engage with data analytics to deliver greater customer insight and marketing effectiveness.
+			a(href="#").page_head_learn_butt Learn More
+	.tracks_page_w.headerTriggerPoint
+		.tracks_main_row
+			ul.step_list
+				li.step_item
+					.step_block
+						header.step_block_header
+							.step_primary_info
+								span.step_num Step #1
+								.step_time
+									+timer_icon('gray_mod')
+									b 3 weeks
+									=" "
+									| to complete
+							.step_tizer
+								span.step_tizer_title You will learn to:
+								ul.step_tizer_list
+									li.step_tizer_item
+										+check_icon('st_mod gray_mod')
+										span.step_tizer_item_in Identify which statistical methods are most useful to marketers.
+									li.step_tizer_item
+										+check_icon('st_mod gray_mod')
+										span.step_tizer_item_in Maximise the effectiveness of the data you hold.
+							h2.step_title Data: Types and Where to Find it?
+
+						ul.step_program_list
+							- var i = 1
+							while i <=5
+								li.step_program_item
+									.step_program_item_in
+										a(href="#").step_program_trigger
+											span.course_num Course #{i}
+											span.course_time 10 min
+											if (i === 3)
+												span.course_missions_amount 5 missions
+										.step_program_content
+											.step_program_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipdey consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+											span.mission_amount 5 missions
+												ul.mission_list
+													li.mission_item
+														span.mission_item_in Name of mission goes here
+													li.mission_item
+														span.mission_item_in Name of mission goes here
+													li.mission_item
+														span.mission_item_in Name of mission goes here
+								-i++;
+				li.step_item
+					.step_block
+						header.step_block_header
+							.step_primary_info
+								span.step_num Step #2
+								.step_time
+									+timer_icon('gray_mod')
+									b 3 weeks
+									=" "
+									| to complete
+							.step_tizer
+								span.step_tizer_title You will learn to:
+								ul.step_tizer_list
+									li.step_tizer_item
+										+check_icon('st_mod gray_mod')
+										span.step_tizer_item_in Identify which statistical methods are most useful to marketers.
+									li.step_tizer_item
+										+check_icon('st_mod gray_mod')
+										span.step_tizer_item_in Maximise the effectiveness of the data you hold.
+							h2.step_title Step 2 name goes here
+
+						ul.step_program_list
+							- var i = 1
+							while i <=5
+								li.step_program_item
+									.step_program_item_in
+										a(href="#").step_program_trigger
+											span.course_num Course ##{i}
+											span.course_time 10 min
+											if (i === 3)
+												span.course_missions_amount 5 missions
+										.step_program_content
+											.step_program_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipdey consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+											span.mission_amount 5 missions
+												ul.mission_list
+													li.mission_item
+														span.mission_item_in Name of mission goes here
+													li.mission_item
+														span.mission_item_in Name of mission goes here
+													li.mission_item
+														span.mission_item_in Name of mission goes here
+								-i++;
+
+
+		aside.tracks_sec_row
+			.aside_section_w
+				.aside_section
+					h3.aside_section_title Your Progress
+					ul.user_progress_list
+						li.user_progress_item
+							.user_progress_block
+								.user_progress_info
+									.user_progress_step(style="color:#20d4b4") Step 1
+									.user_progress_complete 75%
+								.user_progress_bar
+									span.user_progress_bar_in(style="width:75%;background:#20d4b4")
+								a(href="#").user_progress_amount
+									span 8 courses completed
+									span /
+						li.user_progress_item
+							.user_progress_block
+								.user_progress_info
+									.user_progress_step(style="color:#40e19e") Step 2
+									.user_progress_complete 24%
+								.user_progress_bar
+									span.user_progress_bar_in(style="width:24%;background:#40e19e")
+								a(href="#").user_progress_amount
+									span 2 courses completed
+									span /
+						li.user_progress_item
+							.user_progress_block
+								.user_progress_info
+									.user_progress_step
+										+check_icon('st_mod step_complete_mod')
+										span(style="color:#186bff") Step 3
+									.user_progress_complete Completed
+								.user_progress_bar
+									span.user_progress_bar_in(style="width:100%;background:#186bff")
+			a(href="#").aside_ask_butt
+				span.aside_ask_butt_in Ask us a Question
+				img(alt="" src="i/bubbles.png").aside_ask_butt_icon
+			.aside_section_w
+				.aside_section
+					h3.aside_section_title Teachers
+					ul.teacher_list.aside_mod
+						li.teacher_item.aside_mod
+							a(href="#").teacher_block.aside_mod
+								.teacher_i_w.aside_mod
+									img(alt="" src="i/teacher_1.jpg").teacher_i.aside_mod
+								dl.teacher_info.aside_mod
+									dt.teacher_name.aside_mod Michael Abehsera
+									dd.teacher_status.aside_mod Data Scientist
+						li.teacher_item.aside_mod
+							a(href="#").teacher_block.aside_mod
+								.teacher_i_w.aside_mod
+									img(alt="" src="i/teacher_2.jpg").teacher_i.aside_mod
+								dl.teacher_info.aside_mod
+									dt.teacher_name.aside_mod John Smith
+									dd.teacher_status.aside_mod Python Engineer
+			.aside_section_w
+				.aside_section
+					h3.aside_section_title Upgrade to unlock all content
+					p.aside_section_text Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt  ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ulla mco laboris nisi ut aliquip ex ea commodo.
+			a(href="#").aside_view_butt View Membership Options
+			.aside_section_w
+				.aside_section
+					h3.aside_section_title Need some help with this material?
+					p.aside_section_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+			a(href="#").aside_sign_butt Sign up for Personalized Mentorship
+
+
+

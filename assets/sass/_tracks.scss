@@ -1,0 +1,344 @@
+.tracks_page_w {
+	@extend %global_flex_block_row_nowrap_flex-start_stretch;
+
+	width:100%;
+	max-width: $point_1;
+	margin:0 auto;
+	padding: $gl_indent*4 $gl_indent*2.6;
+
+	@include bp($point_2) {
+		@include flex_block(column,nowrap,flex-start)
+	}
+}
+
+.tracks_main_row {
+	flex:1 1 auto;
+	width: 100%;
+	padding: 0 $gl_indent*3.2 0 0;
+
+	@include bp($point_2) {
+		padding:0;
+	}
+}
+
+.tracks_sec_row {
+	flex:0 0 auto;
+	width: 320rem;
+
+	@include bp($point_2) {
+		width: 100%;
+		padding:$gl_indent*2 0 0 0;
+	}
+}
+
+.step_list {
+
+}
+.step_item {
+	padding: $gl_indent*3 0 0 0;
+	&:first-child {
+		padding: 0;
+	}
+}
+.step_block {
+	@extend %st_shadow_2;
+
+	border-radius: 2rem;
+	overflow: hidden;
+}
+.step_block_header {
+	padding: $gl_indent*2 $gl_indent*3 $gl_indent*4;
+	background: $white;
+}
+.step_primary_info {
+	@extend %global_flex_block_row_nowrap_space-between;
+
+	@include bp($point_2) {
+		@include flex_block(column,nowrap,flex-start)
+	}
+}
+.step_num {
+	display: inline-block;
+	height: 22rem;
+	padding: 0 $gl_indent*1.6;
+	line-height: 22rem;
+	color:$white;
+	text-align: center;
+	font-family: $lato;
+	font-size: 11rem;
+	background: $green_2;
+	border-radius: 2rem;
+	font-weight: 700;
+}
+.step_time {
+	position: relative;
+	padding:0 0 0 $gl_indent*2.4;
+	display: block;
+	font-family: $lato;
+	color:$gray_3;
+
+	.timer_icon {
+		position: absolute;
+		left: 0;
+		top:50%;
+		margin-top:-11rem;
+		width: 17rem;
+		height: 20rem;
+	}
+
+	@include bp($point_2) {
+		margin: $gl_indent*2 0 0 0;
+	}
+}
+.step_tizer {
+	padding: $gl_indent*2 0 0 0;
+}
+.step_tizer_title {
+	font-size: 16rem;
+}
+.step_tizer_list {
+	padding: $gl_indent*1.6 0 0 0;
+}
+.step_tizer_item {
+	padding: $gl_indent 0 0 0;
+
+	&:first-child {
+		padding: 0;
+	}
+}
+.step_tizer_item_in {
+	font-size: 14rem;
+	font-family: $lato;
+}
+
+.step_title {
+	padding: $gl_indent*3.4 0 0 0;
+	font-size: 21rem;
+	color:$gray_2;
+}
+//------------------------------------------------------------accordion
+.step_program_list {
+
+}
+.step_program_item {
+
+}
+.step_program_item_in {
+
+}
+.step_program_trigger {
+	@extend %global_flex_block_row_nowrap_space-between;
+
+	height: 58rem;
+	padding: 0 $gl_indent*3;
+	font-family: $lato;
+	line-height: 58rem;
+	text-decoration: none;
+	color:$def_text_color;
+	border-top: 1px solid $light_gray_2;
+
+	&:hover,&:focus {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background: $green_2;
+	}
+}
+.course_num {
+	flex:0 0 auto;
+	font-weight: 700;
+
+	.step_program_trigger:hover & {
+		color:$white;
+	}
+}
+.course_time {
+	display: block;
+	flex:1 1 auto;
+	width: 100%;
+	text-align: right;
+	font-size: 13rem;
+	color:$light_gray_6;
+
+	.step_program_trigger:hover & {
+		color:$white;
+	}
+}
+.course_missions_amount {
+	flex:0 0 auto;
+	padding: 0 0 0 $gl_indent;
+	font-size: 13rem;
+	color:$green_3;
+
+	.step_program_trigger:hover & {
+		color:$white;
+	}
+}
+.step_program_content {
+	padding:$gl_indent*2.4 $gl_indent*3;
+	background: $white;
+}
+.step_program_content_text {
+	font-family: $lato;
+}
+.mission_amount {
+	display: block;
+	padding:$gl_indent*2 0 0 0;
+}
+.mission_list {
+
+}
+.mission_item {
+	padding:$gl_indent*1.6 0 0 0;
+}
+.mission_item_in {
+	font-family: $lato;
+	color:$green_3;
+}
+//------------------------------------------------------------accordion###
+
+//------------------------------------------------------------sidebar
+.aside_section_w {
+	padding: $gl_indent*2 0 0 0;
+	&:first-child {
+		padding: 0;
+	}
+}
+.aside_section {
+	@extend %st_shadow_2;
+
+	padding: $gl_indent*2.4 $gl_indent*3 $gl_indent*3.6;
+	background: $white;
+}
+.aside_section_title {
+	font-size: 18rem;
+	color:$gray_2;
+}
+.user_progress_list {
+	padding: $gl_indent*3 0 0 0;
+}
+.user_progress_item {
+	padding: $gl_indent*2.4 0 0 0;
+
+	&:first-child {
+		padding: 0;
+	}
+}
+.user_progress_info {
+	@extend %global_flex_block_row_nowrap_space-between;
+}
+.user_progress_step {
+
+}
+.user_progress_complete {
+	font-family: $lato;
+	color:$gray_2;
+}
+.user_progress_bar {
+	position: relative;
+	height: 6rem;
+	margin:$gl_indent*.6 0 0 0;
+	background: $light_gray_2;
+}
+.user_progress_bar_in {
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+}
+.user_progress_amount {
+	@extend %global_flex_block_row_nowrap_space-between;
+
+	margin:$gl_indent*.6 0 0 0;
+	font-family: $lato;
+	font-size: 12rem;
+	color:$gray_4;
+}
+.aside_ask_butt {
+	@extend %butt_size_1;
+	@extend %butt_color_1;
+	@extend %st_shadow_2;
+
+	margin:$gl_indent*2 0;
+}
+.aside_ask_butt_in {
+
+}
+.aside_ask_butt_icon {
+	position: relative;
+	top: 4rem;
+	left: 10rem;
+}
+.teacher_list {
+	&.aside_mod {
+		padding: $gl_indent*2 0 0 0;
+	}
+}
+.teacher_item {
+	&.aside_mod {
+		padding: $gl_indent*2.6 0 0 0;
+
+		&:first-child {
+			padding: 0;
+		}
+	}
+}
+.teacher_block {
+	&.aside_mod {
+		@extend %global_flex_block_row_nowrap_flex_start_center;
+
+		&:hover,&:focus {
+			text-decoration: none;
+		}
+	}
+
+}
+.teacher_i_w {
+	&.aside_mod {
+		position: relative;
+		width: 54rem;
+		height: 54rem;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+.teacher_i {
+	&.aside_mod {
+		@extend %hor_vert_centr;
+
+		position: absolute;
+		min-height: 100%;
+		min-width: 100%;
+	}
+}
+.teacher_info {
+	&.aside_mod {
+		padding:0 0 0 $gl_indent*1.2;
+		font-family: $lato;
+	}
+}
+.teacher_name {
+	&.aside_mod {
+		font-size: 16rem;
+		font-weight: 700;
+		color:$gray_2;
+	}
+}
+.teacher_status {
+	&.aside_mod {
+		font-size: 12rem;
+		color:$light_gray_6;
+	}
+}
+.aside_section_text {
+	padding:$gl_indent*1.6 0 0 0;
+}
+.aside_view_butt,.aside_sign_butt {
+	@extend %butt_size_1;
+	@extend %butt_color_2;
+
+	padding: 0;
+	margin: $gl_indent*2 0 0 0;
+}
+//------------------------------------------------------------sidebar###
