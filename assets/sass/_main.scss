@@ -145,7 +145,7 @@ p {
 	z-index: 30;
 	bottom: 40rem;
 	left: 50%;
-	margin-left: -10rem;
+	margin-left: -8rem;
 	opacity: .6;
 	cursor: pointer;
 
@@ -157,7 +157,7 @@ p {
 		opacity: 1;
 	}
 
-	@include arrow(bottom, $white, 20rem);
+	@include arrow(bottom, $white, 16rem);
 }
 
 //------------------------------------------------------------page_head_block###
