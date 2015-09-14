@@ -6,7 +6,7 @@ include templates/_project_vars
 block vars
 	- var array = {body_class:'', layuot_mod:'', sub_keywords:'',title_inner:'Title of the page'}
 block content_block
-	.page_head_block.full_height_mod
+	.page_head_block.auto_height_mod
 		.page_head_block_in
 			h2.page_head_title Learn real-world data science skills
 			p.page_head_title_def Gain the experience and knowledge you need to take your career to the next level.
@@ -27,7 +27,7 @@ block content_block
 				+track_item('green_mod','Data Scientist')
 				+track_item('blue_mod','Data Engineer')
 				li.track_item.add_mod
-					a(href="#").track_add_block
+					.track_add_block
 						.track_add_title More Coming Soon...
 							span.track_add_icon
 	.reply_section_w#reply_section_w

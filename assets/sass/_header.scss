@@ -40,42 +40,14 @@
 	height: 32rem;
 	top: 0;
 	left: 0;
-	background: linear-gradient(55deg, #34D991 0%, #1D88F6 100%);
+	background: url(../i/logo_blue.png);
+	background-size: cover;
 	border-radius: 50%;
 	overflow: hidden;
 	transform: translateZ(0);
-}
-
-.logo_anim_b_sub {
-	position: absolute;
-	width: 48rem*2.5;
-	height: 46rem*2.5;
-	top: -11rem;
-	left: -64rem;
-	will-change: transform;
-//	animation: test 5s linear infinite;
-
-	&.mod_test {
-		opacity: .5;
-	}
-
-	path{
-		fill: $blue;
-	}
 
 	.fixed_mod & {
-		path{
-				fill: $white;
-			}
-	}
-}
-
-@keyframes test {
-	from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(43rem, -59rem);
+		background: url(../i/logo_white.png);
 	}
 }
 
