@@ -27,7 +27,7 @@ $(document).ready(function ($) {
   learn_section = $('#learn_section_w');
   stepAccordion = $('.step_program_list');
 
-  pageWidget(['home', 'tracks']);
+  //pageWidget(['home', 'tracks']);
 
 
   $('.scrollTo').on('click', function () {

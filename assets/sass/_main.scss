@@ -50,7 +50,7 @@ p {
 
 .base {
 	position: relative;
-	padding: $header_height 0 0;
+	padding: $header_height 0 $gl_indent*15;
 }
 
 .elements_list {
@@ -976,24 +976,9 @@ $time: 12s;
 
 .track_add_block {
 	flex: 0 0 auto;
-	&:hover, &:focus {
-		text-decoration: none;
-	}
-	&:hover {
-		.track_add_title {
-			color: darken($light_gray_4, 10%);
-		}
-		.track_add_icon {
-			&:before, &:after {
-				background: darken($light_gray_3, 10%);
-			}
-		}
-	}
 }
 
 .track_add_title {
-	@extend %transition_color;
-
 	position: relative;
 	padding: 0 0 0 $gl_indent*6.6;
 	color: $light_gray_4;
@@ -1009,8 +994,6 @@ $time: 12s;
 	margin-top: -23rem;
 
 	&:before {
-		@extend %transition_background;
-
 		content: "";
 		position: absolute;
 		left: 0;
@@ -1021,8 +1004,6 @@ $time: 12s;
 		background: $light_gray_3;
 	}
 	&:after {
-		@extend %transition_background;
-
 		content: "";
 		position: absolute;
 		top: 0;
