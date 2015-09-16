@@ -50,7 +50,7 @@ p {
 
 .base {
 	position: relative;
-	padding: $header_height 0 $gl_indent*15;
+	padding: 0 0 $gl_indent*15;
 }
 
 .elements_list {
@@ -91,9 +91,20 @@ p {
 		color: $white;
 		text-align: center;
 	}
-	&.auto_height_mod {
+	&.home_mod {
+		@extend %global_flex_block_row_nowrap_center_center;
+
 		position: relative;
-		padding: $gl_indent*15 $gl_indent*2.6;
+		height:720rem;
+		background: $blue;
+		color: $white;
+		text-align: center;
+	}
+	&.tracks_mod {
+		@extend %global_flex_block_row_nowrap_center_center;
+
+		position: relative;
+		height:550rem;
 		background: $blue;
 		color: $white;
 		text-align: center;
@@ -145,7 +156,7 @@ p {
 	z-index: 30;
 	bottom: 40rem;
 	left: 50%;
-	margin-left: -8rem;
+	margin-left: -6rem;
 	opacity: .6;
 	cursor: pointer;
 
@@ -157,7 +168,7 @@ p {
 		opacity: 1;
 	}
 
-	@include arrow(bottom, $white, 16rem);
+	@include arrow(bottom, $white, 12rem);
 }
 
 //------------------------------------------------------------page_head_block###
