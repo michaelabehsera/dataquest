@@ -148,7 +148,7 @@
       -ms-flex-align: center;
           align-items: center; }
 
-.page_head_block.full_height_mod, .track_item.add_mod {
+.page_head_block.full_height_mod, .page_head_block.home_mod, .page_head_block.tracks_mod, .track_item.add_mod {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -642,7 +642,7 @@ p {
 
 .base {
   position: relative;
-  padding: 80rem 0 150rem; }
+  padding: 0 0 150rem; }
 
 .elements_list {
   padding: 30px;
@@ -669,9 +669,16 @@ p {
   color: #fff;
   text-align: center; }
 
-.page_head_block.auto_height_mod {
+.page_head_block.home_mod {
   position: relative;
-  padding: 150rem 26rem;
+  height: 720rem;
+  background: #1a3fde;
+  color: #fff;
+  text-align: center; }
+
+.page_head_block.tracks_mod {
+  position: relative;
+  height: 550rem;
   background: #1a3fde;
   color: #fff;
   text-align: center; }
@@ -713,11 +720,11 @@ p {
   z-index: 30;
   bottom: 40rem;
   left: 50%;
-  margin-left: -8rem;
+  margin-left: -6rem;
   opacity: .6;
   cursor: pointer;
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -750,85 +757,85 @@ p {
     left: 4.44444%;
     height: 28rem;
     width: 28rem;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s; }
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s; }
   .head_slider_circle.mod_2 {
     bottom: 136rem;
     left: 24.66667%;
     height: 62rem;
     width: 62rem;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s; }
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
   .head_slider_circle.mod_3 {
     bottom: 170rem;
     right: 26.66667%;
     height: 46rem;
     width: 46rem;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s; }
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
   .head_slider_circle.mod_4 {
     bottom: 321rem;
     left: 48.11111%;
     height: 62rem;
     width: 62rem;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s; }
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; }
   .head_slider_circle.mod_5 {
     bottom: 60rem;
     right: 43.88889%;
     height: 19rem;
     width: 19rem;
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s; }
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s; }
   .head_slider_circle.mod_6 {
     bottom: 129rem;
     right: 28.38889%;
     height: 62rem;
     width: 62rem;
-    -webkit-animation-delay: 12s;
-            animation-delay: 12s; }
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s; }
   .head_slider_circle.mod_7 {
     bottom: 400rem;
     left: 14.55556%;
     height: 20rem;
     width: 20rem;
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s; }
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
   .head_slider_circle.mod_8 {
     bottom: 194rem;
     right: 7%;
     height: 28rem;
     width: 28rem;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s; }
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
   .head_slider_circle.mod_9 {
     bottom: 350rem;
     left: 3.61111%;
     height: 86rem;
     width: 86rem;
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s; }
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
   .head_slider_circle.mod_10 {
     bottom: 167rem;
     left: 1.88889%;
     height: 8rem;
     width: 8rem;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s; }
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s; }
   .head_slider_circle.mod_20 {
     bottom: 50rem;
     left: 4.44444%;
     height: 28rem;
     width: 28rem;
-    -webkit-animation-delay: 11s;
-            animation-delay: 11s; }
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; }
   .head_slider_circle.mod_19 {
     bottom: 136rem;
     left: 24.66667%;
     height: 62rem;
     width: 62rem;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s; }
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
   .head_slider_circle.mod_18 {
     bottom: 170rem;
     left: 26.66667%;
@@ -841,50 +848,50 @@ p {
     left: 48.11111%;
     height: 62rem;
     width: 62rem;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s; }
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s; }
   .head_slider_circle.mod_16 {
     bottom: 60rem;
     right: 43.88889%;
     height: 19rem;
     width: 19rem;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s; }
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s; }
   .head_slider_circle.mod_15 {
     bottom: 129rem;
     right: 28.38889%;
     height: 62rem;
     width: 62rem;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s; }
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s; }
   .head_slider_circle.mod_14 {
     bottom: 400rem;
     right: 14.55556%;
     height: 20rem;
     width: 20rem;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s; }
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
   .head_slider_circle.mod_13 {
     bottom: 194rem;
     right: 7%;
     height: 28rem;
     width: 28rem;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s; }
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
   .head_slider_circle.mod_12 {
     bottom: 350rem;
     right: 3.61111%;
     height: 86rem;
     width: 86rem;
-    -webkit-animation-delay: 7s;
-            animation-delay: 7s; }
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s; }
   .head_slider_circle.mod_11 {
     bottom: 167rem;
     left: 1.88889%;
     height: 8rem;
     width: 8rem;
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s; }
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
 
 @-webkit-keyframes bulb {
   from {
