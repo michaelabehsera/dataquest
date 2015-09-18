@@ -729,17 +729,38 @@ $time: 12s;
 }
 
 .reply_section {
+	position: relative;
 	width: 100%;
 	max-width: $point_wide;
 	margin: 0 auto;
 	text-align: center;
+}
+.reply_nav {
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.reply_nav_link {
+	position: absolute;
+	top:50%;
+	margin-top:-10rem;
+
+	&.prev_mod {
+		left:0;
+
+		@include arrow(left,$white,20rem,2rem);
+	}
+	&.next_mod {
+		right:0;
+
+		@include arrow(right,$white,20rem,2rem);
+	}
 }
 
 .reply_list {
 	@extend %global_flex_block_row_wrap_flex-start;
 
 	padding: $gl_indent*5 0 0;
-	margin: 0 (-$gl_indent*4.6);
 
 	@include bp($point_2) {
 		margin: 0;
