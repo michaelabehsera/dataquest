@@ -53,6 +53,10 @@
 		@include flex_block(row, nowrap, space-between);
 	}
 
+	%global_flex_block_row_nowrap_space-between_center {
+			@include flex_block(row, nowrap, space-between, center);
+		}
+
 	%global_flex_block_row_wrap_space_between_stretch {
 		@include flex_block(row, wrap, space-between, stretch);
 	}

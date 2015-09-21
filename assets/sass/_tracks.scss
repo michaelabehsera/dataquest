@@ -127,7 +127,7 @@
 
 }
 .step_program_trigger {
-	@extend %global_flex_block_row_nowrap_space-between;
+	@extend %global_flex_block_row_nowrap_space-between_center;
 
 	height: 58rem;
 	padding: 0 $gl_indent*3;
@@ -136,6 +136,7 @@
 	text-decoration: none;
 	color:$def_text_color;
 	border-top: 1px solid $light_gray_2;
+	background: $light_gray;
 
 	&:hover,&:focus {
 		text-decoration: none;
@@ -146,17 +147,20 @@
 	}
 }
 .course_num {
+	position: relative;
 	flex:0 0 auto;
 	font-weight: 700;
+
+	&.full_mod{
+
+	}
 
 	.step_program_trigger:hover & {
 		color:$white;
 	}
 }
 .course_time {
-	display: block;
-	flex:1 1 auto;
-	width: 100%;
+	flex:0 0 auto;
 	text-align: right;
 	font-size: 13rem;
 	color:$light_gray_6;
@@ -240,6 +244,19 @@
 	height: 6rem;
 	margin:$gl_indent*.6 0 0 0;
 	background: $light_gray_2;
+
+	&.user_progress_bar{
+		flex: 0 0 200rem;
+		height: 4rem;
+		margin: 0 145rem 0 auto;
+		background: $light_gray_6;
+
+		box-shadow: 0 0 0 1px $light_gray;
+
+		.step_program_trigger:hover & {
+			background: $white;
+		}
+	}
 }
 .user_progress_bar_in {
 	position: absolute;
@@ -247,6 +264,22 @@
 	bottom:0;
 	left: 0;
 }
+
+.user_progress_text{
+	position: absolute;
+	width: 105rem;
+	top: 50%;
+	margin: -7rem 0 0;
+	right: -115rem;
+	font-size: 13rem;
+	line-height: 1;
+	color:$light_gray_6;
+
+	.step_program_trigger:hover & {
+		color:$white;
+	}
+}
+
 .user_progress_amount {
 	@extend %global_flex_block_row_nowrap_space-between;
 

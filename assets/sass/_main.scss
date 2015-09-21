@@ -1112,11 +1112,37 @@ $time: 12s;
 			fill:$gray_3;
 		}
 	}
+	&.green_mod {
+		fill:$green_2;
+		path {
+			fill:$green_2;
+		}
+
+		.step_program_trigger:hover & {
+			fill: $white;
+			path {
+				fill: $white;
+			}
+		}
+	}
+
 	&.step_complete_mod {
 		fill:#186bff;
 		path {
 			fill:#186bff;
 		}
+	}
+
+	.course_num &{
+		display: none;
+	}
+
+	.course_num.full_mod &{
+		position: absolute;
+		display: block;
+		left: -20rem;
+		top: 50%;
+		margin: -6rem 0 0;
 	}
 }
 

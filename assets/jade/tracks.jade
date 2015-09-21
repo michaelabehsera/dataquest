@@ -41,9 +41,14 @@ block content_block
 								li.step_program_item
 									.step_program_item_in
 										a(href="#").step_program_trigger
-											span.course_num Course #{i}
+											span.course_num(class='#{ i == 1 ? "full_mod":""}')
+												+check_icon('st_mod green_mod')
+												|Course ##{i}
+											span.user_progress_bar.course_mod
+												span.user_progress_bar_in(style="width:75%;background:#20d4b4")
+												span.user_progress_text 100% Completed
 											span.course_time 10 min
-											span.course_missions_amount 5 missions
+											-//span.course_missions_amount 5 missions
 										.step_program_content
 											.step_program_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipdey consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
 											span.mission_amount 5 missions
@@ -82,9 +87,14 @@ block content_block
 								li.step_program_item
 									.step_program_item_in
 										a(href="#").step_program_trigger
-											span.course_num Course ##{i}
+											span.course_num(class='#{ i == 1 ? "full_mod":""}')
+												+check_icon('st_mod green_mod')
+												|Course ##{i}
+											span.user_progress_bar.course_mod
+												span.user_progress_bar_in(style="width:75%;background:#20d4b4")
+												span.user_progress_text 100% Completed
 											span.course_time 10 min
-											span.course_missions_amount 5 missions
+											-//span.course_missions_amount 5 missions
 										.step_program_content
 											.step_program_content_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipdey consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
 											span.mission_amount 5 missions
