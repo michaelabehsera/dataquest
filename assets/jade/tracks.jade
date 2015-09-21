@@ -41,11 +41,11 @@ block content_block
 								li.step_program_item
 									.step_program_item_in
 										a(href="#").step_program_trigger
-											span.course_num(class='#{ i == 1 ? "full_mod":""}')
+											span.course_num.full_mod
 												+check_icon('st_mod green_mod')
 												|Course ##{i}
 											span.user_progress_bar.course_mod
-												span.user_progress_bar_in(style="width:75%;background:#20d4b4")
+												span.user_progress_bar_in(style="width:100%;background:#20d4b4")
 												span.user_progress_text 100% Completed
 											span.course_time 10 min
 											-//span.course_missions_amount 5 missions
@@ -87,12 +87,12 @@ block content_block
 								li.step_program_item
 									.step_program_item_in
 										a(href="#").step_program_trigger
-											span.course_num(class='#{ i == 1 ? "full_mod":""}')
+											span.course_num
 												+check_icon('st_mod green_mod')
 												|Course ##{i}
 											span.user_progress_bar.course_mod
 												span.user_progress_bar_in(style="width:75%;background:#20d4b4")
-												span.user_progress_text 100% Completed
+												span.user_progress_text 75% Completed
 											span.course_time 10 min
 											-//span.course_missions_amount 5 missions
 										.step_program_content
